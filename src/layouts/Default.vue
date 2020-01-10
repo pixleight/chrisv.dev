@@ -3,7 +3,7 @@
     <header class="bg-purple-900">
       <div class="fixed flex inset-0 p-4 w-48 border-t-4 border-b-4 border-purple-600">
         <section class="relative z-10">
-          <h1>Header</h1>
+          <PrimaryNav />
         </section>
       </div>
     </header>
@@ -21,6 +21,18 @@ query {
 }
 </static-query>
 
+<script>
+  import Avatar from '~/components/Avatar';
+  import PrimaryNav from '~/components/header/PrimaryNav';
+
+  export default {
+    components: {
+      Avatar,
+      PrimaryNav,
+    },
+  }
+</script>
+
 <style scoped>
   .wrapper {
     display: grid;
@@ -31,7 +43,7 @@ query {
     }
   }
 
-  header div::after {
+  header > div::after {
     @apply absolute block inset-0 w-full bg-purple-900 border-t-4 border-b-4 border-purple-600;
 
     top: -0.25rem;
@@ -46,9 +58,5 @@ query {
 
     transform: skewX(-3deg);
     transform-origin: bottom right;
-  }
-
-  header section > * {
-    transform: skewX(3deg);
   }
 </style>

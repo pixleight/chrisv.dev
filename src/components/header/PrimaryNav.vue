@@ -10,7 +10,7 @@
     </p>
     <Hamburger @toggle="menuIsVisible = !menuIsVisible" :isActive="menuIsVisible" />
     <div class="fixed sm:static sm:block inset-0" :class="{ isVisible: menuIsVisible }">
-      <nav>
+      <nav class="px-12 sm:p-0">
         <ul>
           <li><a href="">nav item<span></span></a></li>
           <li><a href="">nav item<span></span></a></li>
@@ -78,7 +78,7 @@
   }
     div.isVisible {
       opacity: 1;
-      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, calc(100% - 3rem) 100%, 0% 100%);
       transform: translateX(0);
     }
 
@@ -92,47 +92,60 @@
     transition: color 0.2s ease;
   }
 
-  li a:hover {
-    @apply text-purple-800;
-  }
-
-  li a span {
-    @apply absolute top-0 left-0 bottom-0 w-0 bg-yellow-500;
-
-    z-index: -1;
-    transform: skewX(30deg) translateX(1rem);
-    transition: width 0.3s 0.15s;
-  }
-    li a:hover span {
-      @apply w-full;
-
-      transition: width 0.3s;
+    li a:hover {
+      @apply text-purple-800;
     }
 
-  li a span::after {
-    @apply block absolute right-0 h-0 bg-yellow-700;
+    li a span {
+      @apply absolute block bg-yellow-500;
 
-    content: '';
-    top: 100%;
-    width: 28px;
-    transform: skewX(-33deg);
-    transform-origin: top right;
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-    height: 0;
-    transition: height 0.15s;
-  }
-    li a:hover span::after {
-      height: 14px;
-      transition: height 0.15s 0.23s;
-      /* animation: ribbonunder 0.15s ease 1 forwards 0.23s; */
-  }
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      transition:
+        clip-path 300ms;
+      transition-timing-function:cubic-bezier(0.230, 1.000, 0.320, 1.000);
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
 
-  @keyframes ribbonunder {
-    from {
+      li a:hover span {
+        clip-path: polygon(calc(100% - 0.5rem) 0, 2rem 0%, 0.5rem 100%, calc(100% - 2rem) 100%);
+      }
+
+  @screen sm {
+    li a span {
+      @apply absolute top-0 left-0 bottom-0 w-0 bg-yellow-500;
+
+      right: auto;
+      z-index: -1;
+      clip-path: none;
+      transform: skewX(30deg) translateX(1rem);
+      transition: width 0.3s 0.15s;
+    }
+      li a:hover span {
+        @apply w-full;
+
+        clip-path: none;
+        transition: width 0.3s;
+      }
+
+    li a span::after {
+      @apply block absolute right-0 h-0 bg-yellow-700;
+
+      content: '';
+      top: 100%;
+      width: 28px;
+      transform: skewX(-33deg);
+      transform-origin: top right;
+      clip-path: polygon(0 0, 100% 0, 0 100%);
       height: 0;
+      transition: height 0.15s;
     }
-    to {
-      height: 14px;
+      li a:hover span::after {
+        height: 14px;
+        transition: height 0.15s 0.23s;
     }
   }
 </style>

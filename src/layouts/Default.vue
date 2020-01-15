@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper min-h-screen text-white bg-gray-900">
-    <header class="bg-purple-900">
+  <div class="wrapper min-h-screen text-gray-900 bg-gray-400">
+    <header class="bg-purple-900 text-white">
       <div class="flex sm:fixed sm:inset-0 p-2 sm:p-4 sm:w-48 border-t-2 sm:border-t-4 sm:border-b-4 border-purple-600">
         <PrimaryNav />
       </div>

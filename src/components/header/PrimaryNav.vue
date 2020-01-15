@@ -1,10 +1,12 @@
 <template>
   <section class="relative flex sm:block z-10 w-full justify-between items-center">
-    <figure class="overflow-hidden bg-blue-600 w-12">
+    <figure class="overflow-hidden bg-blue-600 w-12 sm:w-24 sm:mx-auto">
       <Avatar/>
     </figure>
-    <p class="text-2xl leading-relaxed">
-      <span class="text-3xl">{</span> chris<span class="bg-white text-purple-800">violette</span>.dev <span class="text-3xl">}</span>
+    <p class="text-2xl leading-tight sm:-ml-8">
+      <span class="text-3xl">{</span> 
+      <span class="sm:block sm:ml-4">chris<span class="bg-white text-purple-800">violette</span>.dev</span> 
+      <span class="text-3xl">}</span>
     </p>
     <Hamburger @toggle="menuIsVisible = !menuIsVisible" :isActive="menuIsVisible" />
     <div class="fixed sm:static sm:block inset-0" :class="{ isVisible: menuIsVisible }">
@@ -46,7 +48,7 @@
     }
   }
 
-  figure, li {
+  figure, li, p {
     @screen sm {
       transform: skewX(3deg);
     }
@@ -99,10 +101,12 @@
 
     z-index: -1;
     transform: skewX(30deg) translateX(1rem);
-    transition: width 0.3s ease;
+    transition: width 0.3s 0.15s;
   }
     li a:hover span {
       @apply w-full;
+
+      transition: width 0.3s;
     }
 
   li a span::after {
@@ -114,9 +118,13 @@
     transform: skewX(-33deg);
     transform-origin: top right;
     clip-path: polygon(0 0, 100% 0, 0 100%);
+    height: 0;
+    transition: height 0.15s;
   }
     li a:hover span::after {
-      animation: ribbonunder 0.15s ease 1 forwards 0.23s;
+      height: 14px;
+      transition: height 0.15s 0.23s;
+      /* animation: ribbonunder 0.15s ease 1 forwards 0.23s; */
   }
 
   @keyframes ribbonunder {

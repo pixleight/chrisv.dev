@@ -10,5 +10,8 @@ module.exports = {
     {
       use: 'gridsome-plugin-tailwindcss',
     },
+    {
+      use: '@gridsome/source-faker',
+    }
   ]
 }

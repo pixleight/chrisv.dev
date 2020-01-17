@@ -8,8 +8,8 @@
       <span class="sm:block sm:ml-4">chris<span class="bg-white text-purple-800">violette</span>.dev</span> 
       <span class="text-3xl">}</span>
     </p>
-    <Hamburger @toggle="menuIsVisible = !menuIsVisible" :isActive="menuIsVisible" />
-    <div class="fixed sm:static sm:block inset-0" :class="{ isVisible: menuIsVisible }">
+    <Hamburger @toggle="isVisible = !isVisible" :isActive="isVisible" />
+    <div class="fixed sm:static sm:block inset-0" :class="{ 'is-visible': isVisible }">
       <nav class="px-12 sm:p-0">
         <ul>
           <li><a href="">nav item<span></span></a></li>
@@ -34,7 +34,7 @@
     },
     data() {
       return {
-        menuIsVisible: false,
+        isVisible: false,
       }
     },
   }
@@ -76,7 +76,7 @@
       opacity: 1;
     }
   }
-    div.isVisible {
+    div.is-visible {
       opacity: 1;
       clip-path: polygon(0 0, 100% 0, calc(100% - 3rem) 100%, 0% 100%);
       transform: translateX(0);

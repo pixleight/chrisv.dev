@@ -1,5 +1,5 @@
 <template>
-  <button class="relative inline-block sm:hidden cursor-pointer focus:outline-none" :class="{active: isActive}" @click="$emit('toggle')">
+  <button class="relative inline-block sm:hidden cursor-pointer focus:outline-none" :class="{'is-active': isActive}" @click="$emit('toggle')">
     <span></span>
     <span></span>
     <span></span>
@@ -33,7 +33,7 @@
       opacity 75ms 150ms;
     transition-timing-function: cubic-bezier(1, 0.05, 0.62, 1.78);
   }
-    .active span {
+    .is-active span {
       transition:
         top 75ms,
         transform 75ms 150ms,
@@ -44,7 +44,7 @@
   span:first-of-type {
     top: 0;
   }
-    .active span:first-of-type {
+    .is-active span:first-of-type {
       top: 50%;
       transform: rotate(45deg);
     }
@@ -52,14 +52,14 @@
   span:nth-of-type(2) {
     top: calc(50% - 0.1rem);
   }
-    .active span:nth-of-type(2) {
+    .is-active span:nth-of-type(2) {
       opacity: 0;
     }
 
   span:nth-of-type(3) {
     top: calc(100% - 0.2rem);
   }
-    .active span:nth-of-type(3) {
+    .is-active span:nth-of-type(3) {
       top: 50%;
       transform: rotate(-45deg);
     }

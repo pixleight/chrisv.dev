@@ -7,9 +7,18 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "site/pages/home.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
   - name: "posts"
     label: "Posts"
-    folder: "posts"
+    folder: "site/posts"
     create: true
     slug: "{{slug}}"
     fields:

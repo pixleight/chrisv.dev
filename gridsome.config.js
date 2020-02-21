@@ -5,7 +5,17 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Chris Violette [dot] dev',
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        // ...global plugins
+      ]
+    }
+  },
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',

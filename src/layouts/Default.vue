@@ -24,7 +24,12 @@ query {
   import PrimaryNav from '~/components/header/PrimaryNav';
 
   export default {
-    components: {
+    metaInfo: {
+      meta: [
+        { name: 'author', content: 'Chris Violette' },
+      ],
+    },
+  components: {
       Avatar,
       PrimaryNav,
     },

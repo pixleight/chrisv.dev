@@ -6,15 +6,13 @@
       :intro="intro"
       :variant="variant"
     />
-    <div class="post-section__grid">
-      <Snippet v-for="post in posts" :key="post.node.id" :post="post.node" />
-    </div>
+    <PostGrid :posts="posts" />
   </section>
 </template>
 
 <script>
   import SectionHeader from '~/components/SectionHeader';
-  import Snippet from '~/components/Snippet';
+  import PostGrid from '~/components/PostGrid';
 
   export default {
     name: 'PostSection',
@@ -27,18 +25,11 @@
     },
     components: {
       SectionHeader,
-      Snippet,
+      PostGrid,
     }
   }
 </script>
 
 <style scoped>
-.post-section__grid {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  grid-auto-rows: 15rem;
-  grid-auto-flow: dense;
-  grid-gap: 2rem;
-}
+
 </style>

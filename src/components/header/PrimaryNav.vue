@@ -12,11 +12,11 @@
     <div class="fixed sm:static sm:block inset-0" :class="{ 'is-visible': isVisible }">
       <nav class="px-12 sm:p-0">
         <ul>
-          <li><a href="">Snippets<span></span></a></li>
-          <li><a href="">Work<span></span></a></li>
-          <li><a href="">Articles<span></span></a></li>
-          <li><a href="">About<span></span></a></li>
-          <li><a href="">Contact<span></span></a></li>
+          <li><g-link to="/snippets/">Snippets<span></span></g-link></li>
+          <li><g-link to="/work/">Work<span></span></g-link></li>
+          <li><g-link to="/articles/">Articles<span></span></g-link></li>
+          <li><g-link to="/about/">About<span></span></g-link></li>
+          <li><g-link to="/contact/">Contact<span></span></g-link></li>
         </ul>
       </nav>
     </div>

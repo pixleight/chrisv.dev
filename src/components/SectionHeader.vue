@@ -1,9 +1,11 @@
 <template>
   <header :class="variantClass">
-    <h2 class="text-2xl md:text-3xl lg:text-4xl">
-      <span aria-hidden="true">{{ emoji }}</span> {{ heading }}
-    </h2>
-    <p>{{ intro }}</p>
+    <slot>
+      <h2 class="heading">
+        <span aria-hidden="true">{{ emoji }}</span> {{ heading }}
+      </h2>
+      <p>{{ intro }}</p>
+    </slot>
   </header>
 </template>
 
@@ -44,6 +46,27 @@ h2 {
   );
 }
 
+.heading {
+  @apply pl-8 pr-4 pb-1 text-white text-2xl bg-purple-700 flex items-center;
+
+  grid-column: 2;
+  white-space: nowrap;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    1rem 100%
+  );
+
+  @screen md {
+    @apply text-3xl;
+  }
+
+  @screen lg {
+    @apply text-4xl;
+  }
+}
+
 p {
   @apply py-2 self-center text-gray-700;
 }
@@ -52,7 +75,7 @@ p {
   @apply border-teal-500;
 }
 
-.variant--teal h2 {
+.variant--teal .heading {
   @apply bg-teal-500;
 }
 
@@ -60,7 +83,7 @@ p {
   @apply border-green-500;
 }
 
-.variant--green h2 {
+.variant--green .heading {
   @apply bg-green-500;
 }
 
@@ -68,7 +91,7 @@ p {
   @apply border-blue-600;
 }
 
-.variant--blue h2 {
+.variant--blue .heading {
   @apply bg-blue-600;
 }
 </style>

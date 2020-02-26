@@ -1,8 +1,8 @@
 <template>
-  <header :class="variantClass">
+  <header :class="[variantClass, {'flip': flip }]">
     <slot>
       <h2 class="heading">
-        <span aria-hidden="true">{{ emoji }}</span> {{ heading }}
+        <span v-if="emoji" aria-hidden="true">{{ emoji }}</span> {{ heading }}
       </h2>
       <p>{{ intro }}</p>
     </slot>
@@ -17,6 +17,7 @@
       intro: String,
       emoji: String,
       variant: String,
+      flip: Boolean,
     },
     computed: {
       variantClass: ({variant}) => variant ? `variant--${variant}` : null,
@@ -33,17 +34,8 @@ header {
   grid-auto-flow: dense;
 }
 
-h2 {
-  @apply pl-8 pr-4 pb-1 text-white bg-purple-700 flex items-center;
-
-  grid-column: 2;
-  white-space: nowrap;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    1rem 100%
-  );
+.flip {
+  grid-template-columns: auto 1fr;
 }
 
 .heading {
@@ -67,8 +59,28 @@ h2 {
   }
 }
 
+.flip .heading {
+  @apply pr-8 pl-4;
+
+  grid-column: 1;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    calc(100% - 1rem) 100%,
+    0 100%
+  );
+}
+
+span {
+  @apply pr-2;
+}
+
 p {
   @apply py-2 self-center text-gray-700;
+}
+
+.flip p {
+  @apply text-right;
 }
 
 .variant--teal {
@@ -93,5 +105,17 @@ p {
 
 .variant--blue .heading {
   @apply bg-blue-600;
+}
+
+.variant--invert {
+  @apply border-gray-300;
+}
+
+.variant--invert .heading {
+  @apply bg-gray-300 text-gray-900;
+}
+
+.variant--invert p {
+  @apply text-gray-300;
 }
 </style>

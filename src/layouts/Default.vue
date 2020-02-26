@@ -8,6 +8,7 @@
     <main class="p-8">
       <slot/>
     </main>
+    <site-footer />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ query {
 <script>
   import Avatar from '~/components/Avatar';
   import PrimaryNav from '~/components/header/PrimaryNav';
+  import SiteFooter from '~/components/footer/SiteFooter';
 
   export default {
     metaInfo: {
@@ -32,6 +34,7 @@ query {
   components: {
       Avatar,
       PrimaryNav,
+      SiteFooter,
     },
   }
 </script>

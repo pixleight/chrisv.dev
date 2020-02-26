@@ -29,11 +29,21 @@ module.exports = {
         publicPath: '/admin',
       },
     },
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     baseDir: './site/pages',
+    //     path: '*.md',
+    //     typeName: 'Page',
+    //     index: ['home'],
+    //   },
+    // },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'site/**/*.md',
-        typeName: 'Content',
+        baseDir: './site/snippets',
+        path: '*.md',
+        typeName: 'Snippet',
       },
     },
   ]

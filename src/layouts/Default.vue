@@ -5,7 +5,7 @@
         <PrimaryNav />
       </div>
     </header>
-    <main class="p-4">
+    <main class="p-8">
       <slot/>
     </main>
   </div>

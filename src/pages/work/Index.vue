@@ -34,7 +34,7 @@
 
 <page-query>
 query {
-  posts: allFaker(limit: 6) {
+  posts: allWork(limit: 6) {
     edges {
       node {
         id
@@ -42,6 +42,7 @@ query {
         slug
         thumbnail
         avatar
+        path
       }
     }
   }

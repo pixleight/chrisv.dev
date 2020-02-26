@@ -38,8 +38,8 @@
 </template>
 
 <page-query>
-query {
-  snippets: allFaker(limit: 6) {
+query Posts {
+  snippets: allSnippet(limit: 6) {
     edges {
       node {
         id
@@ -47,10 +47,11 @@ query {
         slug
         thumbnail
         avatar
+        path
       }
     }
   }
-  work: allFaker(limit: 6, skip: 6) {
+  work: allWork(limit: 6, skip: 6) {
     edges {
       node {
         id
@@ -58,10 +59,11 @@ query {
         slug
         thumbnail
         avatar
+        path
       }
     }
   }
-  articles: allFaker(limit: 6, skip: 12) {
+  articles: allArticle(limit: 6, skip: 12) {
     edges {
       node {
         id
@@ -69,6 +71,7 @@ query {
         slug
         thumbnail
         avatar
+        path
       }
     }
   }

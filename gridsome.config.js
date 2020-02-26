@@ -22,6 +22,24 @@ module.exports = {
     },
     {
       use: '@gridsome/source-faker',
+      options: {
+        typeName: 'Article',
+        route: '/articles/:slug',
+      },
+    },
+    {
+      use: '@gridsome/source-faker',
+      options: {
+        typeName: 'Snippet',
+        route: '/snippets/:slug',
+      },
+    },
+    {
+      use: '@gridsome/source-faker',
+      options: {
+        typeName: 'Work',
+        route: '/work/:slug',
+      },
     },
     {
       use: 'gridsome-plugin-netlify-cms',
@@ -38,13 +56,13 @@ module.exports = {
     //     index: ['home'],
     //   },
     // },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        baseDir: './site/snippets',
-        path: '*.md',
-        typeName: 'Snippet',
-      },
-    },
-  ]
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     baseDir: './site/snippets',
+    //     path: '*.md',
+    //     typeName: 'Snippet',
+    //   },
+    // },
+  ],
 }

@@ -146,6 +146,16 @@
       li a:hover span::after {
         height: 14px;
         transition: height 0.15s 0.23s;
-    }
+      }
+      li a:hover span::before {
+        display: block;
+        content: "";
+        position: absolute;
+        background: rgba(0,0,0,0.6);
+        top: 100%;
+        height: 6px;
+        width: calc(100% - 2rem);
+        left: 0.5rem;
+      }
   }
 </style>

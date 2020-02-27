@@ -14,23 +14,70 @@ collections:
         name: "home"
         file: "site/pages/home.md"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "About"
+        name: "about"
+        file: "site/pages/about.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Contact"
+        name: "contact"
+        file: "site/pages/contact.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "What I Use"
+        name: "use"
+        file: "site/pages/use.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - { label: "Body", name: "body", widget: "markdown" }
   - name: "snippets"
     label: "Snippets"
     folder: "site/posts/snippets"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
-      - {label: "Publish Date", name: "date", widget: "date"}
-      - label: "Tags"
-        name: "tags"
-        widget: "select"
-        multiple: true
-        min: 1
-        options: ["HTML", "CSS", "SCSS", "JavaScript", "Vue", "Craft CMS", "Twig", "WordPress", "PHP"]
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Code", name: "code", widget: "code", allow_language_selection: true}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
+      - { label: "Publish Date", name: "date", widget: "date" }
+      - { label: "Tags", name: "tags", widget: "relation", collection: "tags", searchFields: ["title"], displayFields: ["title"], valueField: "title", multiple: true }
+      - { label: "Featured Image", name: "image", widget: "image", required: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "work"
+    label: "Work"
+    folder: "site/posts/work"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
+      - { label: "Publish Date", name: "date", widget: "date" }
+      - { label: "Tags", name: "tags", widget: "relation", collection: "tags", searchFields: ["title"], displayFields: ["title"], valueField: "title", multiple: true }
+      - { label: "Featured Image", name: "image", widget: "image", required: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "articles"
+    label: "Articles"
+    folder: "site/posts/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
+      - { label: "Publish Date", name: "date", widget: "date" }
+      - { label: "Tags", name: "tags", widget: "relation", collection: "tags", searchFields: ["title"], displayFields: ["title"], valueField: "title", multiple: true }
+      - { label: "Featured Image", name: "image", widget: "image", required: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "tags"
+    label: "Tags"
+    folder: "site/tags"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }

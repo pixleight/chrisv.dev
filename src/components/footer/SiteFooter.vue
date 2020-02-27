@@ -15,6 +15,7 @@
         <li><g-link to="/contact/"><span>Contact</span></g-link></li>
       </ul>
     </nav>
+    <p class="text-xs mt-8">&copy; 2020 Chris Violette</p>
   </footer>
 </template>
 
@@ -36,6 +37,10 @@
       grid-column: 1 / -1;
       grid-row: 2;
     }
+  }
+
+  nav {
+    @apply -ml-2;
   }
 
   ul {
@@ -70,5 +75,5 @@
 
   nav a:hover::before {
     @apply w-full;
-  }
+  }  
 </style>

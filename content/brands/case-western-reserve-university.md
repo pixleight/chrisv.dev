@@ -1,5 +1,5 @@
 ---
 title: Case Western Reserve University
-logo: /uploads/logo_casewestern.png
+logo: /uploads/brands/logo_casewestern.png
 ---
 

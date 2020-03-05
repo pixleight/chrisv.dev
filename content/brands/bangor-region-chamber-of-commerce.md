@@ -1,5 +1,5 @@
 ---
 title: Bangor Region Chamber of Commerce
-logo: /uploads/logo_bangor-chamber.png
+logo: /uploads/brands/logo_bangor-chamber.png
 ---
 

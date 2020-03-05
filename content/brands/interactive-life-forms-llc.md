@@ -1,5 +1,5 @@
 ---
 title: 'Interactive Life Forms, LLC'
-logo: /uploads/logo_ilf.png
+logo: /uploads/brands/logo_ilf.png
 ---
 

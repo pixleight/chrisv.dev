@@ -12,7 +12,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "site/pages/home.md"
+        file: "content/pages/home.md"
         fields:
           # - { label: "ID", name: "id", widget: "id" }
           - { label: Title, name: title, widget: string }
@@ -28,7 +28,7 @@ collections:
             displayFields: ["title"]
       - label: "About"
         name: "about"
-        file: "site/pages/about.md"
+        file: "content/pages/about.md"
         fields:
           # - { label: "ID", name: "id", widget: "id" }
           - { label: Title, name: title, widget: string }
@@ -36,7 +36,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Contact"
         name: "contact"
-        file: "site/pages/contact.md"
+        file: "content/pages/contact.md"
         fields:
           # - { label: "ID", name: "id", widget: "id" }
           - { label: Title, name: title, widget: string }
@@ -44,7 +44,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "What I Use"
         name: "use"
-        file: "site/pages/use.md"
+        file: "content/pages/use.md"
         fields:
           # - { label: "ID", name: "id", widget: "id" }
           - { label: Title, name: title, widget: string }
@@ -52,7 +52,9 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
   - name: "snippets"
     label: "Snippets"
-    folder: "site/posts/snippets"
+    folder: "content/posts/snippets"
+    media_folder: "/{{media_folder}}/snippets/{{filename}}"
+    public_folder: "{{public_folder}}/snippets/{{filename}}"
     create: true
     slug: "{{slug}}"
     fields:
@@ -68,7 +70,9 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "work"
     label: "Work"
-    folder: "site/posts/work"
+    folder: "content/posts/work"
+    media_folder: "/{{media_folder}}/work/{{filename}}"
+    public_folder: "{{public_folder}}/work/{{filename}}"
     create: true
     slug: "{{slug}}"
     fields:
@@ -84,7 +88,9 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "articles"
     label: "Articles"
-    folder: "site/posts/articles"
+    folder: "content/posts/articles"
+    media_folder: "/{{media_folder}}/articles/{{filename}}"
+    public_folder: "{{public_folder}}/articles/{{filename}}"
     create: true
     slug: "{{slug}}"
     fields:
@@ -100,7 +106,9 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "brands"
     label: "Brands"
-    folder: "site/posts/brands"
+    folder: "content/brands"
+    media_folder: "/{{media_folder}}/brands/{{filename}}"
+    public_folder: "{{public_folder}}/brands/{{filename}}"
     create: true
     slug: "{{slug}}"
     fields:

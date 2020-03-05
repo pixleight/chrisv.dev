@@ -1,5 +1,5 @@
 ---
 title: University of Maine Athletics
-logo: /uploads/logo_umaine.png
+logo: /uploads/brands/logo_umaine.png
 ---
 

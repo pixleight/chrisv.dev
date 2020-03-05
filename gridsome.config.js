@@ -43,7 +43,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'site/posts/brands/*.md',
+        path: 'content/brands/*.md',
         typeName: 'Brand',
       },
     },
@@ -51,7 +51,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'MainPages',
-        path: 'site/pages/**/*.md',
+        path: 'content/pages/**/*.md',
         route: '/:slug',
         refs: {
           brands: 'Brand',
@@ -62,7 +62,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Snippets',
-        path: 'site/posts/snippets/**/*.md',
+        path: 'content/posts/snippets/**/*.md',
         route: '/snippets/:title',
       },
     },

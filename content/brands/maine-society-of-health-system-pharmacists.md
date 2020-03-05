@@ -1,5 +1,5 @@
 ---
 title: Maine Society of Health System Pharmacists
-logo: /uploads/logo_mshp.png
+logo: /uploads/brands/logo_mshp.png
 ---
 

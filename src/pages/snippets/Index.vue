@@ -33,15 +33,13 @@
 
 <page-query>
 query {
-  posts: allSnippet(limit: 6) {
+  posts: allSnippets(limit: 6) {
     edges {
       node {
         id
-        title
-        slug
-        thumbnail
-        avatar
         path
+        title
+        image
       }
     }
   }

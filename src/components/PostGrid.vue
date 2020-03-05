@@ -1,11 +1,12 @@
 <template>
   <div>
-    <Snippet v-for="post in posts" :key="post.node.id" :post="post.node" />
+    <post-preview v-for="post in posts" :key="post.node.id" :post="post.node" />
   </div>
 </template>
 
 <script>
   import Snippet from '~/components/Snippet';
+  import PostPreview from '~/components/PostPreview';
 
   export default {
     name: 'PostGrid',
@@ -13,7 +14,7 @@
       posts: Array,
     },
     components: {
-      Snippet,
+      PostPreview,
     }
   }
 </script>

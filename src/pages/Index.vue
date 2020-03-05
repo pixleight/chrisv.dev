@@ -20,7 +20,15 @@
       variant="purple"
       :posts="$page.snippets.edges"
     />
-    <PostSection
+    <section class="brands">
+      <div class="brand"></div>
+      <div class="brand"></div>
+      <div class="brand"></div>
+      <div class="brand"></div>
+      <div class="brand"></div>
+      <div class="brand"></div>
+    </section>
+    <!-- <PostSection
       emoji="👨‍💻"
       heading="Work"
       intro="Selected examples of my work"
@@ -33,21 +41,19 @@
       intro="More in-depth articles on a variety of topics"
       variant="green"
       :posts="$page.articles.edges"
-    />
+    /> -->
   </Layout>
 </template>
 
 <page-query>
 query Posts {
-  snippets: allSnippet(limit: 6) {
+  snippets: allSnippets(limit: 6) {
     edges {
       node {
         id
-        title
-        slug
-        thumbnail
-        avatar
         path
+        title
+        image
       }
     }
   }
@@ -120,5 +126,9 @@ section {
     100% 100%,
     2rem 100%
   );
+}
+
+.brands {
+  @apply bg-gray-400;
 }
 </style>

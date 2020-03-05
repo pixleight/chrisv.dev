@@ -8,19 +8,29 @@ public_folder: "/uploads"
 
 collections:
   - label: "Pages"
-    name: "pages"
+    name: "mainpages"
     files:
       - label: "Home Page"
         name: "home"
         file: "site/pages/home.md"
         fields:
+          # - { label: "ID", name: "id", widget: "id" }
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
           - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Brands"
+            name: "brands"
+            widget: "relation"
+            collection: "brands"
+            multiple: true
+            searchFields: ["title"]
+            valueField: "title"
+            displayFields: ["title"]
       - label: "About"
         name: "about"
         file: "site/pages/about.md"
         fields:
+          # - { label: "ID", name: "id", widget: "id" }
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
           - { label: "Body", name: "body", widget: "markdown" }
@@ -28,6 +38,7 @@ collections:
         name: "contact"
         file: "site/pages/contact.md"
         fields:
+          # - { label: "ID", name: "id", widget: "id" }
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
           - { label: "Body", name: "body", widget: "markdown" }
@@ -35,6 +46,7 @@ collections:
         name: "use"
         file: "site/pages/use.md"
         fields:
+          # - { label: "ID", name: "id", widget: "id" }
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
           - { label: "Body", name: "body", widget: "markdown" }
@@ -44,10 +56,14 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      # - { label: "ID", name: "id", widget: "uuid" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "date" }
-      - { label: "Tags", name: "tags", widget: "relation", collection: "tags", searchFields: ["title"], displayFields: ["title"], valueField: "title", multiple: true }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        field: {label: Name, name: name, widget: string, default: "tag"}
       - { label: "Featured Image", name: "image", widget: "image", required: true }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "work"
@@ -56,10 +72,14 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      # - { label: "ID", name: "id", widget: "id" }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "date" }
-      - { label: "Tags", name: "tags", widget: "relation", collection: "tags", searchFields: ["title"], displayFields: ["title"], valueField: "title", multiple: true }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        field: {label: Name, name: name, widget: string, default: "tag"}
       - { label: "Featured Image", name: "image", widget: "image", required: true }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "articles"
@@ -68,16 +88,22 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      # - { label: "ID", name: "id", widget: "id" }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "date" }
-      - { label: "Tags", name: "tags", widget: "relation", collection: "tags", searchFields: ["title"], displayFields: ["title"], valueField: "title", multiple: true }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        field: {label: Name, name: name, widget: string, default: "tag"}
       - { label: "Featured Image", name: "image", widget: "image", required: true }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "tags"
-    label: "Tags"
-    folder: "site/tags"
+  - name: "brands"
+    label: "Brands"
+    folder: "site/posts/brands"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      # - { label: "ID", name: "id", widget: "id" }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Logo", name: "logo", widget: "image", required: true }

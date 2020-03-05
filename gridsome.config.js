@@ -30,13 +30,6 @@ module.exports = {
     {
       use: '@gridsome/source-faker',
       options: {
-        typeName: 'Snippet',
-        route: '/snippets/:slug',
-      },
-    },
-    {
-      use: '@gridsome/source-faker',
-      options: {
         typeName: 'Work',
         route: '/work/:slug',
       },
@@ -47,15 +40,32 @@ module.exports = {
         publicPath: '/admin',
       },
     },
-    // {
-    //   use: '@gridsome/source-filesystem',
-    //   options: {
-    //     baseDir: './site/pages',
-    //     path: '*.md',
-    //     typeName: 'Page',
-    //     index: ['home'],
-    //   },
-    // },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'site/posts/brands/*.md',
+        typeName: 'Brand',
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'MainPages',
+        path: 'site/pages/**/*.md',
+        route: '/:slug',
+        refs: {
+          brands: 'Brand',
+        },
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Snippets',
+        path: 'site/posts/snippets/**/*.md',
+        route: '/snippets/:title',
+      },
+    },
     // {
     //   use: '@gridsome/source-filesystem',
     //   options: {

@@ -53,8 +53,8 @@ collections:
   - name: "snippets"
     label: "Snippets"
     folder: "content/posts/snippets"
-    media_folder: "/{{media_folder}}/snippets/{{filename}}"
-    public_folder: "{{public_folder}}/snippets/{{filename}}"
+    media_folder: "/{{media_folder}}/snippets"
+    public_folder: "{{public_folder}}/snippets"
     create: true
     slug: "{{slug}}"
     fields:
@@ -71,8 +71,8 @@ collections:
   - name: "work"
     label: "Work"
     folder: "content/posts/work"
-    media_folder: "/{{media_folder}}/work/{{filename}}"
-    public_folder: "{{public_folder}}/work/{{filename}}"
+    media_folder: "/{{media_folder}}/work"
+    public_folder: "{{public_folder}}/work"
     create: true
     slug: "{{slug}}"
     fields:
@@ -89,8 +89,8 @@ collections:
   - name: "articles"
     label: "Articles"
     folder: "content/posts/articles"
-    media_folder: "/{{media_folder}}/articles/{{filename}}"
-    public_folder: "{{public_folder}}/articles/{{filename}}"
+    media_folder: "/{{media_folder}}/articles"
+    public_folder: "{{public_folder}}/articles"
     create: true
     slug: "{{slug}}"
     fields:
@@ -107,8 +107,8 @@ collections:
   - name: "brands"
     label: "Brands"
     folder: "content/brands"
-    media_folder: "/{{media_folder}}/brands/{{filename}}"
-    public_folder: "{{public_folder}}/brands/{{filename}}"
+    media_folder: "/{{media_folder}}/brands"
+    public_folder: "{{public_folder}}/brands"
     create: true
     slug: "{{slug}}"
     fields:

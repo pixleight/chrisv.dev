@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <section class="home-intro relative shadow-lg overflow-hidden">
-      <header class="home-intro__header bg-green-600 text-white p-4">
+    <section class="home-intro relative shadow-lg overflow-hidden mb-8">
+      <header class="home-intro__header absolute top-0 right-0 bottom-0 bg-green-600 text-white p-4 pl-12">
         <h1 class="text-3xl mb-4">Hi, I'm Chris. 👋</h1>
         <pre class="font-mono">
 {
@@ -102,10 +102,6 @@ export default {
 </script>
 
 <style scoped>
-section {
-  margin-bottom: 4rem;
-}
-
 @screen sm {
   article:nth-child(7n) {
     /* grid-column: span 2;
@@ -118,17 +114,11 @@ section {
 }
 
 .home-intro header {
-  @apply absolute top-0 right-0 bottom-0 pl-12;
-
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
     2rem 100%
   );
-}
-
-.brands {
-  @apply bg-gray-400;
 }
 </style>

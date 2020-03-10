@@ -1,10 +1,32 @@
 <template>
-  <header :class="[variantClass, {'flip': flip }]">
+  <header
+    class="relative grid mb-8 border-t-8"
+    :class="[
+      headerVariantClass,
+      {
+        'flip': !!flip,
+      }
+    ]"
+  >
     <slot>
-      <h2 class="heading">
-        <span v-if="emoji" aria-hidden="true">{{ emoji }}</span> {{ heading }}
+      <h2
+        class="heading flex items-center pl-8 pr-4 pb-1 text-white whitespace-no-wrap text-2xl md:text-3xl lg:text-4x"
+        :class="[
+          headingVariantClass,
+          {
+            'pr-8 pl-4': !!flip,
+          }
+        ]"
+      >
+        <span class="pr-2" v-if="emoji" aria-hidden="true">{{ emoji }}</span> {{ heading }}
       </h2>
-      <p>{{ intro }}</p>
+      <p
+        class="py-2 self-center text-gray-700"
+        :class="{
+          'text-right': !!flip,
+          'text-gray': !!(variant == 'invert'),
+        }"
+      >{{ intro }}</p>
     </slot>
   </header>
 </template>
@@ -21,14 +43,40 @@
     },
     computed: {
       variantClass: ({variant}) => variant ? `variant--${variant}` : null,
+      headerVariantClass: ({variant}) => {
+        switch (variant) {
+          case 'teal':
+            return 'border-teal-500';
+          case 'green':
+            return 'border-green-500';
+          case 'blue':
+            return 'border-blue-600';
+          case 'invert':
+            return 'border-gray-300';
+          default:
+            return 'border-purple-700';
+        }
+      },
+      headingVariantClass: ({variant}) => {
+        switch (variant) {
+          case 'teal':
+            return 'bg-teal-500';
+          case 'green':
+            return 'bg-green-500';
+          case 'blue':
+            return 'bg-blue-600';
+          case 'invert':
+            return 'bg-gray-300 text-gray-900';
+          default:
+            return 'bg-purple-700';
+        }
+      },
     }
   }
 </script>
 
 <style scoped>
 header {
-  @apply relative grid mb-8 border-t-8 border-purple-700 ;
-
   grid-column-gap: 1rem;
   grid-template-columns: 1fr auto;
   grid-auto-flow: dense;
@@ -39,29 +87,16 @@ header {
 }
 
 .heading {
-  @apply pl-8 pr-4 pb-1 text-white text-2xl bg-purple-700 flex items-center;
-
   grid-column: 2;
-  white-space: nowrap;
   clip-path: polygon(
     0 0,
     100% 0,
     100% 100%,
     1rem 100%
   );
-
-  @screen md {
-    @apply text-3xl;
-  }
-
-  @screen lg {
-    @apply text-4xl;
-  }
 }
 
 .flip .heading {
-  @apply pr-8 pl-4;
-
   grid-column: 1;
   clip-path: polygon(
     0 0,
@@ -69,53 +104,5 @@ header {
     calc(100% - 1rem) 100%,
     0 100%
   );
-}
-
-span {
-  @apply pr-2;
-}
-
-p {
-  @apply py-2 self-center text-gray-700;
-}
-
-.flip p {
-  @apply text-right;
-}
-
-.variant--teal {
-  @apply border-teal-500;
-}
-
-.variant--teal .heading {
-  @apply bg-teal-500;
-}
-
-.variant--green {
-  @apply border-green-500;
-}
-
-.variant--green .heading {
-  @apply bg-green-500;
-}
-
-.variant--blue {
-  @apply border-blue-600;
-}
-
-.variant--blue .heading {
-  @apply bg-blue-600;
-}
-
-.variant--invert {
-  @apply border-gray-300;
-}
-
-.variant--invert .heading {
-  @apply bg-gray-300 text-gray-900;
-}
-
-.variant--invert p {
-  @apply text-gray-300;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="post-section">
+  <section class="mb-4">
     <SectionHeader
       :emoji="emoji"
       :heading="heading"

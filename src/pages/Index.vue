@@ -20,14 +20,6 @@
       variant="purple"
       :posts="$page.snippets.edges"
     />
-    <section class="brands">
-      <div class="brand"></div>
-      <div class="brand"></div>
-      <div class="brand"></div>
-      <div class="brand"></div>
-      <div class="brand"></div>
-      <div class="brand"></div>
-    </section>
     <!-- <PostSection
       emoji="👨‍💻"
       heading="Work"
@@ -102,13 +94,6 @@ export default {
 </script>
 
 <style scoped>
-@screen sm {
-  article:nth-child(7n) {
-    /* grid-column: span 2;
-    grid-row: span 2; */
-  }
-}
-
 .home-intro {
   height: 20rem;
 }

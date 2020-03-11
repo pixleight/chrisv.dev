@@ -1,10 +1,6 @@
 <template>
   <div class="site-footer z-30 sm:row-start-2">
-    <section class="brands">
-      <div class="brand" v-for="brand in $static.brands.edges" :key="brand.node.id">
-        <g-image :src="brand.node.logo" :alt="brand.node.title" />
-      </div>
-    </section>
+    <brands-list/>
     <footer class="bg-gray-900 text-white z-10 p-8">
       <section-header
         heading="Chris Violette"
@@ -26,26 +22,14 @@
   </div>
 </template>
 
-<static-query>
-query {
-  brands: allBrand(order: ASC, sortBy: "title") {
-    edges {
-      node {
-        id
-        title
-        logo
-      }
-    }
-  }
-}
-</static-query>
-
 <script>
   import SectionHeader from '~/components/SectionHeader';
   import FooterNavItem from './FooterNavItem';
+  import BrandsList from './brands/BrandsList';
 
   export default {
     components: {
+      BrandsList,
       SectionHeader,
       FooterNavItem,
     }

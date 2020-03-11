@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper min-h-screen text-gray-900 bg-gray-200">
-    <header class="bg-purple-900 text-white">
+    <header class="fixed z-20 inset-0 bottom-auto sm:inset-auto sm:static bg-purple-900 text-white">
       <div class="flex sm:fixed sm:inset-0 p-2 sm:p-4 sm:w-48 border-t-2 sm:border-t-4 sm:border-b-4 border-purple-600">
         <PrimaryNav />
       </div>
     </header>
-    <main class="p-8">
+    <main class="p-8 mt-16 sm:mt-0">
       <slot/>
     </main>
     <site-footer />

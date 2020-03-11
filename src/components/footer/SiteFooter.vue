@@ -1,79 +1,76 @@
 <template>
-  <footer>
-    <section-header
-      heading="Chris Violette"
-      emoji="👨‍🎤"
-      variant="invert"
-      intro="Front End Web Developer"
-    />
-    <nav>
-      <ul>
-        <li><g-link to="/snippets/"><span>Snippets</span></g-link></li>
-        <li><g-link to="/work/"><span>Work</span></g-link></li>
-        <li><g-link to="/articles/"><span>Articles</span></g-link></li>
-        <li><g-link to="/about/"><span>About</span></g-link></li>
-        <li><g-link to="/contact/"><span>Contact</span></g-link></li>
-      </ul>
-    </nav>
-    <p class="text-xs mt-8">&copy; 2020 Chris Violette</p>
-  </footer>
+  <div class="site-footer z-30 sm:row-start-2">
+    <section class="brands">
+      <div class="brand" v-for="brand in $static.brands.edges" :key="brand.node.id">
+        <g-image :src="brand.node.logo" :alt="brand.node.title" />
+      </div>
+    </section>
+    <footer class="bg-gray-900 text-white z-10 p-8">
+      <section-header
+        heading="Chris Violette"
+        emoji="👨‍🎤"
+        variant="invert"
+        intro="Front End Web Developer"
+      />
+      <nav class="-ml-2">
+        <ul class="flex flex-wrap">
+          <footer-nav-item to="/snippets/">Snippets</footer-nav-item>
+          <footer-nav-item to="/work/">Work</footer-nav-item>
+          <footer-nav-item to="/articles/">Articles</footer-nav-item>
+          <footer-nav-item to="/about/">About</footer-nav-item>
+          <footer-nav-item to="/contact/">Contact</footer-nav-item>
+        </ul>
+      </nav>
+      <p class="text-xs mt-8">&copy; 2020 Chris Violette</p>
+    </footer>
+  </div>
 </template>
+
+<static-query>
+query {
+  brands: allBrand(order: ASC, sortBy: "title") {
+    edges {
+      node {
+        id
+        title
+        logo
+      }
+    }
+  }
+}
+</static-query>
 
 <script>
   import SectionHeader from '~/components/SectionHeader';
+  import FooterNavItem from './FooterNavItem';
 
   export default {
     components: {
       SectionHeader,
+      FooterNavItem,
     }
   }
 </script>
 
 <style scoped>
-  footer {
-    @apply bg-gray-900 text-white z-10 p-8;
-
+  .site-footer {
     @screen sm {
       grid-column: 1 / -1;
-      grid-row: 2;
     }
   }
 
-  nav {
-    @apply -ml-2;
+  .brands {
+    @apply grid bg-gray-300;
+
+    grid-template-columns: repeat(5, 1fr);
   }
 
-  ul {
-    @apply flex flex-wrap;
+  .brand {
+    @apply p-4 flex items-center justify-center;
   }
 
-  nav li:not(:last-child) {
-    /* @apply mr-2; */
+  .brand img {
+    max-width: 5rem;
+    filter: grayscale(1);    
   }
-
-  nav a {
-    @apply inline-block px-2 py-1 uppercase relative;
-
-    transition: color 200ms ease;
-  }
-
-  nav a > span {
-    @apply relative z-10;
-  }
-
-  nav a::before {
-    @apply block absolute top-0 bottom-0 w-0 bg-yellow-500;
-    content: '';
-    left: 50%;
-    transform: translateX(-50%) skewX(25deg);
-    transition: width 200ms ease, height 200ms ease;
-  }
-
-  nav a:hover {
-    @apply text-gray-900;
-  }
-
-  nav a:hover::before {
-    @apply w-full;
-  }  
 </style>

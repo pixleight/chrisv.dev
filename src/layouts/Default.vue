@@ -5,7 +5,7 @@
         <PrimaryNav />
       </div>
     </header>
-    <main class="p-8 mt-16 sm:mt-0">
+    <main class="container p-8 mt-16 sm:mt-0">
       <slot/>
     </main>
     <site-footer />

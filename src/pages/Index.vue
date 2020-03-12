@@ -1,17 +1,13 @@
 <template>
   <Layout>
-    <section class="home-intro relative shadow-lg overflow-hidden mb-8">
-      <header class="home-intro__header absolute top-0 right-0 bottom-0 bg-green-600 text-white p-4 pl-12">
-        <h1 class="text-3xl mb-4">Hi, I'm Chris. 👋</h1>
-        <pre class="font-mono">
-{
-  bornRaised: 'Maine',
-  living: 'Cleveland',
-  role: 'Front End Developer',
-}
-        </pre>
-      </header>
-      <g-image class="block w-full object-cover" src="https://i.pravatar.cc/800"></g-image>
+    <section class="home-intro relative shadow-lg overflow-hidden mb-8 bg-green-600 text-white grid gap-4 md:block">
+      <g-image class="md:float-left md:max-w-xs" src="~/assets/photo.jpg"></g-image>
+      <h1 class="text-3xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-6xl md:mb-4 self-center">Hi, I'm Chris. 👋</h1>
+      <pre class="mb-4 font-mono col-start-1 col-end-3 whitespace-pre md:whitespace-pre-line lg:whitespace-pre lg:text-xl xl:text-2xl">{
+  bornRaised: <span>'Maine'</span>,
+  living: <span>'Cleveland'</span>,
+  role: <span>'Front End Developer'</span>,
+}</pre>
     </section>
     <PostSection
       emoji="🧙"
@@ -95,7 +91,7 @@ export default {
 
 <style scoped>
 .home-intro {
-  height: 20rem;
+  grid-template-columns: 6rem 1fr;
 }
 
 .home-intro header {
@@ -106,4 +102,18 @@ export default {
     2rem 100%
   );
 }
+
+.home-intro img {
+  @screen md {
+    transform: translateX(-25%);
+    shape-outside: polygon(50% 0%, 50% 50%, 75% 100%);
+    shape-margin: 1rem;
+    clip-path: polygon(25% 0, 75% 0, 100% 100%, 25% 100%);
+  }
+}
+
+.home-intro pre {
+  justify-self: center;
+}
+
 </style>

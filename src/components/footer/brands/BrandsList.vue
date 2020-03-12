@@ -1,7 +1,9 @@
 <template>
-  <section class="grid grid-cols-2 sm:grid-cols-5 bg-gray-300">
-    <div class="p-4 flex items-center justify-center" v-for="brand in $static.brands.edges" :key="brand.node.id">
-      <g-image :src="brand.node.logo" :alt="brand.node.title" />
+  <section class="bg-gray-300 overflow-x-auto">
+    <div class="flex flex-wrap justify-center">
+      <div class="p-4 flex items-center justify-center" v-for="brand in $static.brands.edges" :key="brand.node.id">
+        <g-image :src="brand.node.logo" :alt="brand.node.title" />
+      </div>
     </div>
   </section>
 </template>

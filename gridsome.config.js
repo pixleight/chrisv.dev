@@ -16,6 +16,9 @@ module.exports = {
       ]
     }
   },
+  templates: {
+    Snippet: '/snippets/:title',
+  },
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
@@ -61,7 +64,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Snippets',
+        typeName: 'Snippet',
         path: 'content/posts/snippets/**/*.md',
         route: '/snippets/:title',
       },

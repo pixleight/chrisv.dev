@@ -35,7 +35,7 @@
 
 <page-query>
 query Posts {
-  snippets: allSnippets(limit: 6) {
+  snippets: allSnippet(limit: 6) {
     edges {
       node {
         id

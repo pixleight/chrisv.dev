@@ -2,7 +2,7 @@
   <li class="py-2">
     <g-link 
       :to="to"
-      class="block relative py-2 pr-4 pl-8 hover:text-purple-800 transition-colors duration-200 ease-out"
+      class="block relative font-display py-2 pr-4 pl-8 hover:text-purple-800 transition-colors duration-200 ease-out"
     >
       <slot></slot>
       <span class="absolute block bg-yellow-500 inset-0 sm:absolute sm:right-auto sm:w-0"></span>

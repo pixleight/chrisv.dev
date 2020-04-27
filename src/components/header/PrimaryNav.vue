@@ -3,7 +3,7 @@
     <figure class="overflow-hidden bg-blue-600 w-12 sm:w-24 sm:mx-auto">
       <Avatar/>
     </figure>
-    <p class="text-2xl leading-tight sm:-ml-8">
+    <p class="font-display text-xl leading-tight sm:-ml-8">
       <span class="text-3xl">{</span> 
       <span class="sm:block sm:ml-4">chris<span class="bg-white text-purple-800">violette</span>.dev</span> 
       <span class="text-3xl">}</span>

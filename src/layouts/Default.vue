@@ -1,62 +1,59 @@
 <template>
-  <div class="wrapper min-h-screen text-gray-900 bg-gray-200">
-    <header class="fixed z-20 inset-0 bottom-auto sm:inset-auto sm:static bg-purple-900 text-white">
-      <div class="flex sm:fixed sm:inset-0 p-2 sm:p-4 sm:w-48 border-t-2 sm:border-t-4 sm:border-b-4 border-purple-600">
-        <PrimaryNav />
-      </div>
-    </header>
-    <main class="container p-8 mt-16 sm:mt-0">
-      <slot/>
+  <div class="container h-screen mx-auto p-8 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-8">
+    <div class="header-wrap">
+      <header class="sticky pb-2 border-r border-site-transparent">
+        <SiteName class="block mb-8" />
+        <nav>
+          <ul>
+            <primary-nav-item to="/snippets/">Snippets</primary-nav-item>
+            <primary-nav-item to="/work/">Work</primary-nav-item>
+            <primary-nav-item to="/articles/">Articles</primary-nav-item>
+            <primary-nav-item to="/about/">About</primary-nav-item>
+            <primary-nav-item to="/work/">Work</primary-nav-item>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <main class="md:col-span-2 xl:col-span-3">
+      <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <WorkPreview />
+        <WorkPreview />
+        <WorkPreview />
+        <WorkPreview />
+        <WorkPreview />
+        <WorkPreview />
+        <WorkPreview />
+        <WorkPreview />
+        <WorkPreview />
+        <p>More</p>
+      </section>
     </main>
-    <site-footer />
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
-  import Avatar from '~/components/Avatar';
-  import PrimaryNav from '~/components/header/PrimaryNav';
-  import SiteFooter from '~/components/footer/SiteFooter';
+  import SiteName from '@/components/header/SiteName'
+  import PrimaryNavItem from '@/components/header/PrimaryNavItem'
+  import WorkPreview from '@/components/work/WorkPreview'
 
   export default {
-    metaInfo: {
-      meta: [
-        { name: 'author', content: 'Chris Violette' },
-      ],
-    },
-  components: {
-      Avatar,
-      PrimaryNav,
-      SiteFooter,
-    },
+    components: {
+      SiteName,
+      PrimaryNavItem,
+      WorkPreview,
+    }
   }
 </script>
 
 <style scoped>
-  .wrapper {
-    @screen sm {
-      display: grid;
-      grid-template-columns: 12rem auto;
-      grid-column-gap: 6vh;
-    }
-  }
+.header-wrap {
+  padding-top: 20vh;
+}
 
-  @screen sm {
-    header > div::after {
-      @apply absolute block inset-0 w-full bg-purple-900 border-t-4 border-b-4 border-purple-600;
-
-      top: -0.25rem;
-      bottom: -0.25rem;
-      content: '';
-      transform: skewX(-3deg);
-      transform-origin: bottom right;
-    }
-  }
+.sticky {
+  top: 1rem;
+}
 </style>

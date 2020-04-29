@@ -4,12 +4,25 @@
 
 @tailwind utilities;
 
-article * + * {
+:root {
+  --color-background: #1e1a2c;
+  --color-body: #fff;
+  --color-transparent: rgba(255, 255, 255, 0.15);
+  --color-primary: #434190;
+  --color-secondary: #38b2ac;
+  --color-invert: #1a202c;
+}
+
+body {
+  @apply bg-site-background text-site-body;
+}
+
+.markdown * + * {
   margin-top: 1.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-display font-normal;
+  @apply font-display font-normal text-site-primary;
 }
 
 @supports (font-variation-settings: "wght" 450) {

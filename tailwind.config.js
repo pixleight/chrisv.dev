@@ -20,8 +20,18 @@ module.exports = {
           transparent: 'var(--color-transparent)',
           primary: 'var(--color-primary)',
           secondary: 'var(--color-secondary)',
+          accent: 'var(--color-accent)',
           invert: 'var(--color-invert)',
         },
+      },
+      skew: {
+        '15': '15deg',
+        '-15': '-15deg',
+        '30': '30deg',
+        '-30': '-30deg',
+      },
+      boxShadow: {
+        'sharp': '8px 8px 0 rgba(0, 0, 0, 0.3)',
       },
     },
   }

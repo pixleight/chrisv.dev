@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-3 overflow-hidden rounded-lg mb-16">
     <picture class="transform -skew-x-15 origin-top-right overflow-hidden rounded-lg">
-      <g-image class="transform skew-x-15 origin-top-right" src="~/assets/cviolette-photo.jpg"></g-image>
+      <g-image class="transform skew-x-15 origin-top-right" src="~/assets/cviolette-photo.jpg" alt="Chris Violette, Web Developer &amp; Designer"></g-image>
     </picture>
     <div class="col-span-2 transform -skew-x-15 origin-bottom-right flex bg-indigo-900 rounded-lg top-heading">
       <div class="m-auto transform skew-x-15 flex flex-col justify-center items-center">

@@ -24,6 +24,9 @@
 </template>
 
 <script>
+  import { mapState, mapMutations } from 'vuex'
+  import { Mutations as AppMutations } from '@/store/app/types'
+
   import SiteName from '@/components/header/SiteName'
   import PrimaryNavItem from '@/components/header/PrimaryNavItem'
   import PostSection from '@/components/posts/PostSection'
@@ -35,6 +38,16 @@
       PrimaryNavItem,
       PostSection,
       HomeIntro,
+    },
+    computed: {
+      ...mapState('app', {
+        darkMode: state => state.darkMode,
+      }),
+    },
+    methods: {
+      ...mapMutations('app', {
+        setDarkMode: AppMutations.SET_DARKMODE,
+      }),
     },
     beforeCreate() {
       function checkDarkMode() {

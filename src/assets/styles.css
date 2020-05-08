@@ -24,11 +24,11 @@
 }
 
 body {
-  @apply bg-gray-light;
+  @apply bg-gray-200;
 }
 
 .mode-dark body {
-  @apply bg-gray-dark;
+  @apply bg-gray-900;
 }
 
 .markdown * + * {

@@ -34,19 +34,6 @@ module.exports = {
           medium: 'var(--color-medium-gray)',
           dark: 'var(--color-dark-gray)',
         },
-        white: 'var(--color-white)',
-        purple: {
-          ...colors.purple,
-          default: 'var(--color-purple)',
-        },
-        teal: {
-          ...colors.teal,
-          default: 'var(--color-teal)',
-        },
-        yellow: {
-          ...colors.yellow,
-          default: 'var(--color-yellow)',
-        },
         theme: {
           background: 'var(--theme-background)',
           body: 'var(--theme-body)',
@@ -67,6 +54,10 @@ module.exports = {
         'sharp-left': '-8px 8px 0 rgba(0, 0, 0, 0.3)',
         'sharp-right': '8px 8px 0 rgba(0, 0, 0, 0.3)',
       },
+      rotate: {
+        '-3': '3deg',
+        '3': '3deg',
+      }
     },
   },
   variants: {

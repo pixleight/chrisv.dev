@@ -4,10 +4,17 @@
       <g-image class="transform skew-x-15 origin-top-right" src="~/assets/cviolette-photo.jpg"></g-image>
     </picture>
     <div class="col-span-2 transform -skew-x-15 origin-bottom-right flex bg-indigo-900 rounded-lg top-heading">
-      <div class="m-auto transform skew-x-15">
-        <h1 class="text-4xl font-medium text-theme-body relative">
+      <div class="m-auto transform skew-x-15 flex flex-col justify-center items-center">
+        <h1 class="text-2xl sm:text-4xl font-medium text-white relative transition-all duration-150 ease-out">
           <span class="relative z-10">Hi, I'm Chris.</span>
         </h1>
+        <p class="text-white text-center my-3">
+          Web Developer <br class="sm:hidden"/>& Designer
+        </p>
+        <p class="time-mag hidden sm:block text-center leading-tight text-white text-sm px-2 py-1 opacity-0 transform translate-y-2 transition-all duration-300 ease-out text-indigo-900 bg-white bg-opacity-75 rounded-sm shadow-sharp-right">
+          2006 Time Magazine<br/>
+          Person of the Year!
+        </p>
       </div>
     </div>
   </div>
@@ -20,10 +27,6 @@
 </script>
 
 <style scoped>
-h1 {
-  @apply transition-all duration-150 ease-out;
-}
-
 h1::before {
   @apply absolute block top-0 bottom-0 bg-yellow-500 transform -skew-x-15 z-0 rounded transition-all duration-150 ease-out;
 
@@ -55,6 +58,10 @@ h1::after {
 
   left: -0.25em;
   right: -0.25em;
+}
+
+.top-heading:hover .time-mag {
+  @apply translate-y-0 -rotate-3 opacity-100;
 }
 
 @keyframes wave {

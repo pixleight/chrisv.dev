@@ -52,7 +52,7 @@ h3 {
   }
 
   &::before {
-    @apply bg-purple;
+    @apply bg-indigo-900;
     z-index: -1;
     transition: clip-path 250ms;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);

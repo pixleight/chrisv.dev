@@ -15,7 +15,7 @@
           </nav>
         </header>
       </div>
-      <HomeIntro class="md:col-span-3 xl:col-span-4 row-start-1" />
+      <HomeHero class="md:col-span-3 xl:col-span-4 row-start-1" />
       <main class="py-8 min-h-screen md:col-span-2 xl:col-span-3">
         <PostSection />
       </main>
@@ -30,14 +30,14 @@
   import SiteName from '@/components/header/SiteName'
   import PrimaryNavItem from '@/components/header/PrimaryNavItem'
   import PostSection from '@/components/posts/PostSection'
-  import HomeIntro from '@/components/header/HomeIntro'
+  import HomeHero from '@/components/header/HomeHero'
 
   export default {
     components: {
       SiteName,
       PrimaryNavItem,
       PostSection,
-      HomeIntro,
+      HomeHero,
     },
     computed: {
       ...mapState('app', {

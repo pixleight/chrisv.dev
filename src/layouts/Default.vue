@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-8 h-screen">
+  <div class="container mx-auto p-8 h-screen text-gray-900 dark:text-gray-100">
     <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-8">
       <div class="header-wrap">
         <header class="sticky pb-2 border-r border-theme-transparent">
@@ -35,7 +35,21 @@
       PrimaryNavItem,
       PostSection,
       HomeIntro,
-    }
+    },
+    beforeCreate() {
+      function checkDarkMode() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return true;
+        }
+        return false;
+      }
+
+      if (checkDarkMode()) {
+        document.documentElement.classList.add('mode-dark');
+      } else {
+        document.documentElement.classList.remove('mode-dark');
+      }
+    },
   }
 </script>
 

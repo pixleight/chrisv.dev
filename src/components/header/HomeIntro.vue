@@ -3,7 +3,7 @@
     <picture class="transform -skew-x-15 origin-top-right overflow-hidden rounded-lg">
       <g-image class="transform skew-x-15 origin-top-right" src="~/assets/cviolette-photo.jpg"></g-image>
     </picture>
-    <div class="col-span-2 transform -skew-x-15 origin-bottom-right flex bg-theme-primary rounded-lg top-heading">
+    <div class="col-span-2 transform -skew-x-15 origin-bottom-right flex bg-purple-900 rounded-lg top-heading">
       <div class="m-auto transform skew-x-15">
         <h1 class="text-4xl font-medium text-theme-body relative">
           <span class="relative z-10">Hi, I'm Chris.</span>
@@ -25,7 +25,7 @@ h1 {
 }
 
 h1::before {
-  @apply absolute block top-0 bottom-0 bg-theme-accent transform -skew-x-15 z-0 rounded transition-all duration-150 ease-out;
+  @apply absolute block top-0 bottom-0 bg-yellow-500 transform -skew-x-15 z-0 rounded transition-all duration-150 ease-out;
 
   content: '';
   left: 50%;
@@ -41,7 +41,7 @@ h1::after {
 }
 
 .top-heading:hover h1 {
-  @apply text-theme-primary;
+  @apply text-purple-900;
 }
 
 .top-heading:hover h1::after {

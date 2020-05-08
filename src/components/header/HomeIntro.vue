@@ -1,9 +1,9 @@
 <template>
-  <div class="grid grid-cols-3 overflow-hidden rounded-lg mb-16">
+  <div class="grid grid-cols-3 items-center md:min-h-screen py-8 overflow-hidden rounded-lg mb-16">
     <picture class="transform -skew-x-15 origin-top-right overflow-hidden rounded-lg">
       <g-image class="transform skew-x-15 origin-top-right" src="~/assets/cviolette-photo.jpg" alt="Chris Violette, Web Developer &amp; Designer"></g-image>
     </picture>
-    <div class="col-span-2 transform -skew-x-15 origin-bottom-right flex bg-indigo-900 rounded-lg top-heading">
+    <div class="pt-12 pb-4 col-span-2 transform -skew-x-15 origin-bottom-right flex bg-indigo-900 rounded-lg top-heading">
       <div class="m-auto transform skew-x-15 flex flex-col justify-center items-center">
         <h1 class="text-2xl sm:text-4xl font-medium text-white relative transition-all duration-150 ease-out">
           <span class="relative z-10">Hi, I'm Chris.</span>

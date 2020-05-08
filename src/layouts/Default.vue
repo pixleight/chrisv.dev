@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto p-8 h-screen text-gray-900 dark:text-gray-100">
+  <div class="container mx-auto px-8 h-screen text-gray-900 dark:text-gray-100">
     <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-8">
-      <div class="header-wrap">
+      <div class="header-wrap py-8">
         <header class="sticky pb-2 border-r border-theme-transparent">
           <SiteName class="block mb-8" />
           <nav>
@@ -16,7 +16,7 @@
         </header>
       </div>
       <HomeIntro class="md:col-span-3 xl:col-span-4 row-start-1" />
-      <main class="md:col-span-2 xl:col-span-3">
+      <main class="py-8 min-h-screen md:col-span-2 xl:col-span-3">
         <PostSection />
       </main>
     </div>

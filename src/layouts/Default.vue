@@ -49,7 +49,7 @@
         setDarkMode: AppMutations.SET_DARKMODE,
       }),
     },
-    beforeCreate() {
+    beforeMount() {
       function checkDarkMode() {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
           return true;

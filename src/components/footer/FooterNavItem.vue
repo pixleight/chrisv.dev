@@ -21,7 +21,7 @@
 
 <style scoped>
 a::before {
-  @apply block absolute top-0 bottom-0 w-0 bg-yellow-500duration-200 ease-out;
+  @apply block absolute top-0 bottom-0 w-0 bg-yellow-500 duration-200 ease-out;
   content: '';
   left: 50%;
   transform: translateX(-50%) skewX(25deg);

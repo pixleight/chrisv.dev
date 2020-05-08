@@ -64,7 +64,8 @@ module.exports = {
         '-30': '-30deg',
       },
       boxShadow: {
-        'sharp': '8px 8px 0 rgba(0, 0, 0, 0.3)',
+        'sharp-left': '-8px 8px 0 rgba(0, 0, 0, 0.3)',
+        'sharp-right': '8px 8px 0 rgba(0, 0, 0, 0.3)',
       },
     },
   },

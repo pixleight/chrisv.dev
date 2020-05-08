@@ -51,7 +51,7 @@ h1::after {
 }
 
 .top-heading:hover h1::before {
-  @apply shadow-sharp;
+  @apply shadow-sharp-right;
 
   left: -0.25em;
   right: -0.25em;

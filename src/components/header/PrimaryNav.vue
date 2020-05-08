@@ -9,7 +9,7 @@
       <span class="text-3xl">}</span>
     </p>
     <Hamburger @toggle="isVisible = !isVisible" :isActive="isVisible" />
-    <div class="fixed sm:static sm:block inset-0 bg-indigo-900opacity-0 sm:opacity-100" :class="{ 'is-visible opacity-100': isVisible }">
+    <div class="fixed sm:static sm:block inset-0 bg-indigo-900 opacity-0 sm:opacity-100" :class="{ 'is-visible opacity-100': isVisible }">
       <nav class="px-12 sm:p-0">
         <ul>
           <primary-nav-item to="/snippets/">Snippets</primary-nav-item>

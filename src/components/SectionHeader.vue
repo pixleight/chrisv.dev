@@ -21,7 +21,7 @@
         <span class="pr-2" v-if="emoji" aria-hidden="true">{{ emoji }}</span> {{ heading }}
       </h2>
       <p
-        class="py-2 self-center text-gray-700"
+        class="py-2 self-center text-gray-dark"
         :class="{
           'text-right': !!flip,
           'text-gray': !!(variant == 'invert'),
@@ -52,9 +52,9 @@
           case 'blue':
             return 'border-blue-600';
           case 'invert':
-            return 'border-gray-300';
+            return 'border-gray-light';
           default:
-            return 'border-purple-700';
+            return 'border-purple';
         }
       },
       headingVariantClass: ({variant}) => {
@@ -66,9 +66,9 @@
           case 'blue':
             return 'bg-blue-600';
           case 'invert':
-            return 'bg-gray-300 text-gray-900';
+            return 'bg-gray-light text-gray-dark';
           default:
-            return 'bg-purple-700';
+            return 'bg-purple';
         }
       },
     }

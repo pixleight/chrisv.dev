@@ -1,6 +1,6 @@
 <template>
   <li>
-    <g-link :to="to" class="inline-block px-2 py-1 uppercase relative hover:text-gray-900 transition-colors duration-200 ease-out">
+    <g-link :to="to" class="inline-block px-2 py-1 uppercase relative hover:text-gray-dark transition-colors duration-200 ease-out">
       <span class="relative z-10">
         <slot />
       </span>
@@ -21,7 +21,7 @@
 
 <style scoped>
 a::before {
-  @apply block absolute top-0 bottom-0 w-0 bg-yellow-500 duration-200 ease-out;
+  @apply block absolute top-0 bottom-0 w-0 bg-yellow duration-200 ease-out;
   content: '';
   left: 50%;
   transform: translateX(-50%) skewX(25deg);

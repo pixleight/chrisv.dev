@@ -22,6 +22,6 @@
 } */
 
 .markdown >>> pre {
-  @apply overflow-auto p-4 text-gray-100 bg-gray-800 rounded;
+  @apply overflow-auto p-4 text-gray-light bg-gray-dark rounded;
 }
 </style>

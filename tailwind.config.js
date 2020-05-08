@@ -14,14 +14,26 @@ module.exports = {
     },
     extend: {
       colors: {
-        site: {
-          background: 'var(--color-background)',
-          body: 'var(--color-body)',
-          transparent: 'var(--color-transparent)',
-          primary: 'var(--color-primary)',
-          secondary: 'var(--color-secondary)',
-          accent: 'var(--color-accent)',
-          invert: 'var(--color-invert)',
+        gray: {
+          light: 'var(--color-light-gray)',
+          medium: 'var(--color-medium-gray)',
+          dark: 'var(--color-dark-gray)',
+        },
+        white: {
+          default: 'var(--color-white)',
+          transparent: 'var(--color-white-transparent)',
+        },
+        purple: 'var(--color-purple)',
+        teal: 'var(--color-teal)',
+        yellow: 'var(--color-yellow)',
+        theme: {
+          background: 'var(--theme-background)',
+          body: 'var(--theme-body)',
+          transparent: 'var(--theme-transparent)',
+          primary: 'var(--theme-primary)',
+          secondary: 'var(--theme-secondary)',
+          accent: 'var(--theme-accent)',
+          invert: 'var(--theme-invert)',
         },
       },
       skew: {

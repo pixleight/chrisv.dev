@@ -1,6 +1,6 @@
 <template>
   <g-link class="block flex" :to="post.path">
-    <article class="relative w-full bg-gray-500 rounded-lg shadow overflow-hidden flex flex-col hover:shadow-xl">
+    <article class="relative w-full bg-gray-medium rounded-lg shadow overflow-hidden flex flex-col hover:shadow-xl">
       <h3 class="relative z-10 text-white mt-auto mb-4 mr-4 px-4 pt-2 pb-3">
         <g-link :to="post.path">
           <span class="block">{{ post.title }}</span>
@@ -52,7 +52,7 @@ h3 {
   }
 
   &::before {
-    @apply bg-purple-900;
+    @apply bg-purple;
     z-index: -1;
     transition: clip-path 250ms;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);

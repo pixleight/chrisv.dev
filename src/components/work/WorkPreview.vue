@@ -1,6 +1,6 @@
 <template>
   <g-link class="sm:row-span-3 md:row-span-1 lg:row-span-3">
-    <article class="rounded-lg overflow-hidden bg-gray-200 shadow-lg flex flex-col h-full relative">
+    <article class="rounded-lg overflow-hidden bg-gray-light shadow-lg flex flex-col h-full relative">
       <header>
         <g-image src="https://placekitten.com/600/400" />
       </header>
@@ -8,10 +8,10 @@
         <h2 class="text-xl self-end relative">
           Project Name
         </h2>
-        <p class="col-span-2 row-start-2 text-site-invert text-sm">
+        <p class="col-span-2 row-start-2 text-theme-invert text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <aside class="text-site-secondary text-xs col-span-2 row-start-1 space-x-1">
+        <aside class="text-theme-secondary text-xs col-span-2 row-start-1 space-x-1">
           <span>Vue</span>
           <span>Craft</span>
           <span>CSS</span>

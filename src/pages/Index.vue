@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="home-intro relative shadow-lg overflow-hidden mb-8 bg-green-600 text-white grid gap-4 md:block">
-      <g-image class="md:float-left md:max-w-xs" src="~/assets/photo.jpg"></g-image>
+      <g-image class="md:float-left md:max-w-xs" src="~/assets/cviolette-photo.jpg"></g-image>
       <h1 class="text-3xl sm:text-2xl md:text-3xl lg:text-6xl xl:text-6xl md:mb-4 self-center">Hi, I'm Chris. 👋</h1>
       <pre class="mb-4 font-mono col-start-1 col-end-3 whitespace-pre md:whitespace-pre-line lg:whitespace-pre lg:text-xl xl:text-2xl">{
   bornRaised: <span>'Maine'</span>,

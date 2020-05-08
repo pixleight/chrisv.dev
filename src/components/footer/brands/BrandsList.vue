@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-300 overflow-x-auto">
+  <section class="bg-gray-light overflow-x-auto">
     <div class="flex flex-wrap justify-center">
       <div class="p-4 flex items-center justify-center" v-for="brand in $static.brands.edges" :key="brand.node.id">
         <g-image :src="brand.node.logo" :alt="brand.node.title" />

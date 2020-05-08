@@ -1,7 +1,7 @@
 <template>
   <div class="site-footer z-30 sm:row-start-2">
     <brands-list/>
-    <footer class="bg-gray-900 text-white z-10 p-8">
+    <footer class="bg-gray-dark text-white z-10 p-8">
       <section-header
         heading="Chris Violette"
         emoji="👨‍🎤"
@@ -44,7 +44,7 @@
   }
 
   .brands {
-    @apply grid bg-gray-300;
+    @apply grid bg-gray-light;
 
     grid-template-columns: repeat(5, 1fr);
   }

@@ -5,17 +5,26 @@
 @tailwind utilities;
 
 :root {
-  --color-background: #1e1a2c;
-  --color-body: #fff;
-  --color-transparent: rgba(255, 255, 255, 0.15);
-  --color-primary: #434190;
-  --color-secondary: #38b2ac;
-  --color-accent: #ecc94b;
-  --color-invert: #1a202c;
+  --color-light-gray: #f9f9fb;
+  --color-medium-gray: #9ba9c5;
+  --color-dark-gray: #1e1a2c;
+  --color-white: #fff;
+  --color-white-transparent: rgba(255, 255, 255, 0.15);
+  --color-purple: #434190;
+  --color-teal: #38b2ac;
+  --color-yellow: #ecc94b;
+
+  --theme-background: #1e1a2c;
+  --theme-body: #fff;
+  --theme-transparent: rgba(255, 255, 255, 0.15);
+  --theme-primary: #434190;
+  --theme-secondary: #38b2ac;
+  --theme-accent: #ecc94b;
+  --theme-invert: #1a202c;
 }
 
 body {
-  @apply bg-site-background text-site-body;
+  @apply bg-theme-background text-theme-body;
 }
 
 .markdown * + * {
@@ -23,7 +32,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-display font-normal text-site-primary;
+  @apply font-display font-normal text-theme-primary;
 }
 
 @supports (font-variation-settings: "wght" 450) {

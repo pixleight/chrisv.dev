@@ -2,7 +2,7 @@
   <Layout>
     <article>
       <PostHeading>
-        <span class="text-purple-800">{{ $page.post.title }}</span>
+        <span class="text-purple">{{ $page.post.title }}</span>
       </PostHeading>
       <main>
         <MarkdownContent :content="$page.post.content" />

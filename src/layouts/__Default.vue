@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper min-h-screen text-gray-900 foo">
-    <header class="fixed z-20 inset-0 bottom-auto sm:inset-auto sm:static bg-purple-900 text-white">
-      <div class="flex sm:fixed sm:inset-0 p-2 sm:p-4 sm:w-48 border-t-2 sm:border-t-4 sm:border-b-4 border-purple-600">
+  <div class="wrapper min-h-screen text-gray-dark foo">
+    <header class="fixed z-20 inset-0 bottom-auto sm:inset-auto sm:static bg-purple text-white">
+      <div class="flex sm:fixed sm:inset-0 p-2 sm:p-4 sm:w-48 border-t-2 sm:border-t-4 sm:border-b-4 border-purple">
         <PrimaryNav />
       </div>
     </header>
@@ -50,7 +50,7 @@ query {
 
   @screen sm {
     header > div::after {
-      @apply absolute block inset-0 w-full bg-purple-900 border-t-4 border-b-4 border-purple-600;
+      @apply absolute block inset-0 w-full bg-purple border-t-4 border-b-4 border-purple;
 
       top: -0.25rem;
       bottom: -0.25rem;

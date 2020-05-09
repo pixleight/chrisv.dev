@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-3 items-center lg:min-h-screen py-8 overflow-hidden rounded-lg mb-16">
+  <div class="grid grid-cols-3 lg:items-center lg:min-h-screen overflow-hidden rounded-lg mb-16">
     <picture class="transform -skew-x-15 origin-top-right overflow-hidden rounded-lg">
       <g-image class="transform skew-x-15 origin-top-right" src="~/assets/cviolette-photo.jpg" alt="Chris Violette, Web Developer &amp; Designer"></g-image>
     </picture>

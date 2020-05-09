@@ -1,6 +1,6 @@
 <template>
-  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8 grid-flow-row-dense">
-    <h2 class="ml-3 -mr-3 px-4 py-1 text-2xl text-indigo-900 bg-yellow-500 sm:col-span-2 md:col-span-1 lg:col-span-2 transform -skew-x-15 shadow-sharp-right rounded">
+  <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 grid-flow-row-dense">
+    <h2 class="ml-3 -mr-3 px-4 py-1 text-2xl text-indigo-900 bg-yellow-500 sm:col-span-2 lg:col-span-2 transform -skew-x-15 shadow-sharp-right rounded">
       <span class="inline-block transform skew-x-15">{{ heading }}</span>
     </h2>
     <p class="post-section__intro">
@@ -31,14 +31,6 @@
 
   section:nth-child(2n+1) .post-section__intro {
     @screen sm {
-      @apply col-start-2;
-    }
-
-    @screen md {
-      @apply col-start-1;
-    }
-
-    @screen lg {
       @apply col-start-2;
     }
   }

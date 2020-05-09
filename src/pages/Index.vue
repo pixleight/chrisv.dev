@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #hero>
-      <HomeHero class="md:col-span-3 xl:col-span-4 row-start-1" />
+      <HomeHero class="lg:col-span-3 xl:col-span-4 row-start-1" />
     </template>
     <template #default>
       <PostSection

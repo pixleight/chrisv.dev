@@ -1,6 +1,6 @@
 <template>
-  <g-link to="/">
-    <figure class="overflow-hidden bg-blue-600 mx-auto mb-2 w-24 shadow-xl">
+  <g-link to="/" class="flex items-center lg:flex-col lg:mb-8">
+    <figure class="overflow-hidden bg-blue-600 shadow-xl w-12 h-12 mr-4 lg:mx-auto lg:mb-2 lg:w-24 lg:h-auto">
       <Avatar />
     </figure>
     <span class="sitename text-center text-xl flex justify-center items-center">

@@ -14,11 +14,11 @@
         }"
       >
         <ul>
-          <primary-nav-item to="/snippets/">Snippets</primary-nav-item>
           <primary-nav-item to="/work/">Work</primary-nav-item>
+          <primary-nav-item to="/snippets/">Snippets</primary-nav-item>
           <primary-nav-item to="/articles/">Articles</primary-nav-item>
           <primary-nav-item to="/about/">About</primary-nav-item>
-          <primary-nav-item to="/work/">Work</primary-nav-item>
+          <primary-nav-item to="/contact/">Contact</primary-nav-item>
         </ul>
       </nav>
     </header>

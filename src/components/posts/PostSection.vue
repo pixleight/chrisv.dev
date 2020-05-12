@@ -6,7 +6,7 @@
     <p class="post-section__intro">
       Examples of projects I've worked on, big and small.
     </p>
-    <PostCard />
+    <PostCard v-for="post in posts" :key="post.id" :post="post" />
   </section>
 </template>
 
@@ -17,6 +17,7 @@
     props: {
       heading: String,
       intro: String,
+      posts: Array,
     },
     components: {
       PostCard,

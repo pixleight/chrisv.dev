@@ -15,6 +15,14 @@ collections:
         file: content/settings/collectionOrder.md
         fields:
           - label: Work
+            name: workItems
+            widget: relation
+            collection: work
+            searchFields: [title]
+            displayFields: [title]
+            valueField: id
+            multiple: true
+          - label: Work
             name: workCollection
             widget: list
             fields:

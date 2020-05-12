@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid'
 //   const orderingList = data.order.childMarkdownRemark.frontmatter.collection
 //   const collections = data.collections.edges
 //   return (
-//     <>
+//     <div>
 //       {order.map(item => {
 //         const orderingName = item.collectionName
 //         return collections.map(collection => {
@@ -23,7 +23,7 @@ import { v4 as uuid } from 'uuid'
 //           }
 //         })
 //       })}
-//     </>
+//     </div>
 //   )
 // }
 

@@ -8,12 +8,13 @@
         class="mb-16"
         heading="My Work"
         intro="Examples of projects I've worked on, big and small."
+        :posts="workItems"
       />
-      <PostSection
+      <!-- <PostSection
         heading="Snippets"
         intro="Examples of projects I've worked on, big and small."
-      />
-      <BrandsList/>
+      /> -->
+      <!-- <BrandsList/> -->
     </template>
   </Layout>
 </template>
@@ -29,9 +30,31 @@
       HomeHero,
       BrandsList,
     },
+    computed: {
+      workItems() {
+        return this.$page.collections.workItems;
+      }
+    }
   }
 </script>
 
 <style scoped>
 
 </style>
+
+<page-query>
+{
+  collections: settings(path: "/content/settings/collection-order/") {
+    workItems {
+      id
+      title
+      path
+      tags {
+        tag
+      }
+      excerpt
+      image (width: 500, quality: 80)
+    }
+  }
+}
+</page-query>

@@ -31,6 +31,7 @@ module.exports = {
         modulePath: './src/admin/index.js',
       },
     },
+    { use: 'gridsome-plugin-netlify-cms-paths' },
     {
       use: '@gridsome/source-filesystem',
       options: {
@@ -93,4 +94,7 @@ module.exports = {
     //   },
     // },
   ],
+  chainWebpack: config => {
+    config.resolve.alias.set('@uploads', '~/assets')
+  },
 }

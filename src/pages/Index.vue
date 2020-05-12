@@ -6,7 +6,7 @@
     <template #default>
       <PostSection
         class="mb-16"
-        heading="My Work"
+        heading="Things I've Built"
         intro="Examples of projects I've worked on, big and small."
         :posts="workItems"
       />

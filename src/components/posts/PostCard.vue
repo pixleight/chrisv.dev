@@ -5,7 +5,7 @@
     class="sm:row-span-3 md:row-span-1 lg:row-span-3 transition-all duration-150 ease-in transform hover:-translate-y-3 hover:shadow-xl">
     <article class="rounded-lg overflow-hidden bg-gray-900 dark:bg-gray-200 text-gray-200 dark:text-gray-800 shadow-lg flex flex-col h-full relative">
       <header>
-        <g-image :src="post.image" width="500" />
+        <g-image :src="require(`!!assets-loader!~/assets${post.image}`)" width="500" />
       </header>
       <main class="flex-1 mt-0 p-2 grid gap-2">
         <h2 class="text-xl self-end relative text-yellow-500 dark:text-indigo-800">

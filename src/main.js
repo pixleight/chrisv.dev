@@ -11,8 +11,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   appOptions.store = Store;
 
   head.link.push({
-    rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@450&family=Montserrat:wght@300;400;500&display=swap',
+    rel: 'preload',
+    as: 'style',
+    onload: 'this.onload=null;this.rel="stylesheet"',
   })
 
   // Set default layout as a global component

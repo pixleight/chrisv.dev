@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Chris Violette [dot] dev',
+  siteDescription: 'Web developer and designer specializing in frontend development.',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',

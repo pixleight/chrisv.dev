@@ -24,23 +24,11 @@ module.exports = {
       use: 'gridsome-plugin-tailwindcss',
     },
     {
-      use: '@gridsome/source-faker',
-      options: {
-        typeName: 'Article',
-        route: '/articles/:slug',
-      },
-    },
-    {
-      use: '@gridsome/source-faker',
-      options: {
-        typeName: 'Work',
-        route: '/work/:slug',
-      },
-    },
-    {
       use: 'gridsome-plugin-netlify-cms',
       options: {
-        publicPath: '/admin',
+        // publicPath: '/admin',
+        // htmlPath: './src/admin/index.html',
+        modulePath: './src/admin/index.js',
       },
     },
     {
@@ -69,6 +57,29 @@ module.exports = {
         route: '/snippets/:title',
       },
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Work',
+        path: 'content/posts/work/**/*.md',
+        route: '/work/:title',
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Tags',
+        path: 'content/tags/**/*.mb',
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Settings',
+        path: 'content/settings/**/*.mb',
+        route: '/settings/:title',
+      },
+    }
     // {
     //   use: '@gridsome/source-filesystem',
     //   options: {

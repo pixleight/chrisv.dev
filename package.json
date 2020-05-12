@@ -13,7 +13,8 @@
     "gridsome": "^0.7.14",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-tailwindcss": "^2.2.48",
-    "netlify-cms": "^2.10.24",
+    "netlify-cms": "^2.10.48",
+    "uuid": "^8.0.0",
     "vuex": "^3.3.0"
   },
   "devDependencies": {

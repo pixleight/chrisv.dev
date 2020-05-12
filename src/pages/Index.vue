@@ -13,6 +13,7 @@
         heading="Snippets"
         intro="Examples of projects I've worked on, big and small."
       />
+      <BrandsList/>
     </template>
   </Layout>
 </template>
@@ -20,11 +21,13 @@
 <script>
   import HomeHero from '@/components/header/HomeHero'
   import PostSection from '@/components/posts/PostSection'
+  import BrandsList from '@/components/footer/brands/BrandsList'
 
   export default {
     components: {
       PostSection,
       HomeHero,
+      BrandsList,
     },
   }
 </script>

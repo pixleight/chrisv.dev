@@ -7,6 +7,44 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
+  - name: settings
+    label: Settings
+    files:
+      - name: collectionOrder
+        label: Collection Order
+        file: content/settings/collectionOrder.md
+        fields:
+          - label: Work
+            name: workCollection
+            widget: list
+            fields:
+              - label: Work Item
+                name: workItem
+                widget: relation
+                collection: work
+                searchFields: [title]
+                displayFields: [title]
+                valueField: id
+      - name: tags
+        label: Tags
+        file: content/settings/tags.md
+        fields:
+          - label: Tags
+            name: tags
+            widget: list
+            fields:
+              - label: Tag
+                name: tag
+                widget: relation
+                collection: tags
+                searchFields: [title]
+                valueField: title
+  - name: tags
+    label: Tags
+    folder: content/tags
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
   - label: "Pages"
     name: "mainpages"
     files:
@@ -61,7 +99,7 @@ collections:
       # - { label: "ID", name: "id", widget: "uuid" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
-      - { label: "Publish Date", name: "date", widget: "date" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
       - label: "Tags"
         name: "tags"
         widget: "list"
@@ -76,14 +114,20 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      # - { label: "ID", name: "id", widget: "id" }
+      - { label: "ID", name: "id", widget: "id" }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
-      - { label: "Publish Date", name: "date", widget: "date" }
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
-        field: {label: Name, name: name, widget: string, default: "tag"}
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: Tags
+        name: tags
+        widget: list
+        fields:
+          - label: Tag
+            name: tag
+            widget: relation
+            collection: tags
+            searchFields: [title]
+            valueField: title
       - { label: "Featured Image", name: "image", widget: "image", required: true }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "articles"
@@ -97,7 +141,7 @@ collections:
       # - { label: "ID", name: "id", widget: "id" }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
-      - { label: "Publish Date", name: "date", widget: "date" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
       - label: "Tags"
         name: "tags"
         widget: "list"

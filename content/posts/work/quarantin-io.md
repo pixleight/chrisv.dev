@@ -1,4 +1,5 @@
 ---
+id: aaef5447-2ec7-4b68-83b2-71a10033ecd5
 title: Quarantin.io
 excerpt: A web-based app crowdsourcing stock levels of crucial groceries and
   other supplies during the COVID-19 pandemic.

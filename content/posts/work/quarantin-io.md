@@ -9,7 +9,7 @@ tags:
   - tag: Vuetify
   - tag: Firebase
   - tag: Netlify
-image: /uploads/work/quarantinio.jpg
+image: https://res.cloudinary.com/chrisvdev/image/upload/v1589407095/work/quarantinio_wfrbum.jpg
 ---
 As the COVID-19 pandemic was just starting to affect normal life for most people, a coworker jokingly asked, "what if there was a crowdsourcing app for finding toilet paper?"
 

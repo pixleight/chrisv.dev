@@ -53,7 +53,7 @@
         tag
       }
       excerpt
-      image (width: 500, quality: 80)
+      image
     }
   }
 }

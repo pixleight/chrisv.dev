@@ -32,7 +32,6 @@ module.exports = {
         modulePath: './src/admin/index.js',
       },
     },
-    { use: 'gridsome-plugin-netlify-cms-paths' },
     {
       use: '@gridsome/source-filesystem',
       options: {

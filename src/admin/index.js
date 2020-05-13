@@ -1,4 +1,5 @@
 import CMS from 'netlify-cms'
+import cloudinary from 'netlify-cms-media-library-cloudinary'
 import { v4 as uuid } from 'uuid'
 
 // function Page({ data }) {
@@ -60,3 +61,5 @@ const IdPreview = createClass({
  * Register the widget. This lets NetlifyCMS know about our custom widget
  */
 CMS.registerWidget('id', IdControl, IdPreview);
+
+CMS.registerMediaLibrary(cloudinary);

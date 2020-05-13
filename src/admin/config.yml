@@ -3,8 +3,14 @@ backend:
   repo: pixleight/chrisv.dev
   branch: master
 
-media_folder: "src/assets/uploads"
-public_folder: "/uploads"
+# media_folder: "src/assets/uploads"
+# public_folder: "/uploads"
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: chrisvdev
+    api_key: 661442683666741
 
 collections:
   - name: settings

@@ -1,12 +1,20 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
+import Cloudinary from 'cloudinary-vue'
+
 import Store from './store'
 
 import DefaultLayout from '~/layouts/Default.vue'
 import '~/assets/styles.css';
 
 export default function (Vue, { router, head, isClient, appOptions }) {
+
+  Vue.use(Cloudinary, {
+    configuration: {
+      cloudName: "chrisvdev"
+    }
+  });
 
   appOptions.store = Store;
 

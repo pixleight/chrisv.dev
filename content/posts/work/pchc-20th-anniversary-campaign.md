@@ -8,7 +8,7 @@ tags:
   - tag: Branding
   - tag: Graphic Design
   - tag: React.js
-image: /uploads/work/pchc20-logo.png
+image: https://res.cloudinary.com/chrisvdev/image/upload/v1589407105/work/pchc20-logo_hudkil.png
 ---
 Penobscot Community Health Care, a Federally-Qualified Health Center based in Bangor, Maine, celebrated their 20th year in 2018.
 

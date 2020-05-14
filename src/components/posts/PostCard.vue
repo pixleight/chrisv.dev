@@ -5,13 +5,23 @@
     class="sm:row-span-3 md:row-span-1 lg:row-span-3 transition-all duration-150 ease-in transform hover:-translate-y-3 hover:shadow-xl">
     <article class="rounded-lg overflow-hidden bg-gray-900 dark:bg-gray-200 text-gray-200 dark:text-gray-800 shadow-lg flex flex-col h-full relative">
       <header>
-        <!-- <g-image :src="require(`!!assets-loader!~/assets${post.image}`)" width="500" :alt="post.title" /> -->
-        <!-- <c-image :src="post.image" width="1200" height="630" :alt="post.title" crop="lfill" /> -->
         <cld-image
           :publicId="assetUrl"
+          :alt="post.title"
           responsive="width"
-          width="auto"
-        />
+          width="600"
+          height="315"
+          :lazy="true"
+          placeholder="color"
+        >
+          <cld-transformation
+            width="600"
+            height="315"
+            crop="lfill"
+            quality="auto"
+            fetchFormat="auto"
+          />
+        </cld-image>
       </header>
       <main class="flex-1 mt-0 p-2 grid gap-2">
         <h2 class="text-xl self-end relative text-yellow-500 dark:text-indigo-800">
@@ -31,16 +41,15 @@
 </template>
 
 <script>
-  import CImage from '~/components/CImage'
   export default {
     props: {
       post: Object,
     },
-    components: {
-      CImage,
-    },
     computed: {
       assetUrl() {
+        // Extract the cloudinary path out of the full url:
+        // Example: "https://res.cloudinary.com/chrisvdev/image/upload/v1589407095/work/quarantinio_wfrbum.jpg"
+        // @returns 'work/quarantinio_wfrbum.jpg'
         return this.post.image.match(/\/v\d+\/(.+)$/)[1]
       }
     },

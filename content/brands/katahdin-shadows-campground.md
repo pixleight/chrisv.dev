@@ -1,5 +1,4 @@
 ---
 title: Katahdin Shadows Campground
-logo: /uploads/brands/logo_katahdinshadows.png
+logo: https://res.cloudinary.com/chrisvdev/image/upload/v1589420587/brands/logo_katahdinshadows_cltrbz.png
 ---
-

@@ -1,5 +1,4 @@
 ---
 title: Stonewall Kitchen
-logo: /uploads/brands/logo_stonewall-kitchen.png
+logo: https://res.cloudinary.com/chrisvdev/image/upload/v1589420587/brands/logo_stonewall-kitchen_bhxzpb.png
 ---
-

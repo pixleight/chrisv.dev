@@ -5,9 +5,9 @@ excerpt: Designed an anniversary logo & associated marketing campaign to
   celebrate PCHC's 20th year.
 date: 2020-05-10T19:35:41.959Z
 tags:
-  - tag: Branding
-  - tag: Graphic Design
-  - tag: React.js
+  - Branding
+  - Graphic Design
+  - React.js
 image: https://res.cloudinary.com/chrisvdev/image/upload/v1589407105/work/pchc20-logo_hudkil.png
 ---
 Penobscot Community Health Care, a Federally-Qualified Health Center based in Bangor, Maine, celebrated their 20th year in 2018.

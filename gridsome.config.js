@@ -63,7 +63,12 @@ module.exports = {
       options: {
         typeName: 'Work',
         path: 'content/posts/work/**/*.md',
-        route: '/work/:title',
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true,
+          },
+        },
       },
     },
     {

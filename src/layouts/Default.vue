@@ -1,12 +1,17 @@
 <template>
-  <div class="container h-screen px-8 mx-auto mt-24 text-gray-900 lg:mt-0 dark:text-gray-100">
-    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 xl:grid-cols-4">
-      <SiteHeader />
-      <slot name="hero"/>
-      <main class="min-h-screen py-8 lg:col-span-2 xl:col-span-3">
-        <slot/>
-      </main>
+  <div class="min-h-screen">
+    <div class="container px-8 mx-auto mt-24 text-gray-900 lg:mt-0 dark:text-gray-100">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 xl:grid-cols-4">
+        <SiteHeader />
+        <slot name="hero"/>
+        <main class="min-h-screen py-8 lg:col-span-2 xl:col-span-3">
+          <slot/>
+        </main>
+      </div>
     </div>
+    <footer>
+      <BrandsList />
+    </footer>
   </div>
 </template>
 
@@ -19,6 +24,7 @@
   import PrimaryNavItem from '@/components/header/PrimaryNavItem'
   import PostSection from '@/components/posts/PostSection'
   import HomeHero from '@/components/header/HomeHero'
+  import BrandsList from '@/components/footer/brands/BrandsList'
 
   export default {
     components: {
@@ -27,6 +33,7 @@
       PrimaryNavItem,
       PostSection,
       HomeHero,
+      BrandsList,
     },
     computed: {
       ...mapState('app', {

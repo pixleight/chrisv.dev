@@ -2,7 +2,7 @@
   <g-link
     :href="post.path"
     :aria-label="post.title"
-    class="transition-all duration-150 ease-in transform sm:row-span-3 md:row-span-1 lg:row-span-3 hover:-translate-y-3 hover:shadow-xl">
+    class="transition-all duration-150 ease-in transform sm:row-span-3 hover:-translate-y-3 hover:shadow-xl">
     <article class="relative flex flex-col h-full overflow-hidden text-gray-200 bg-gray-900 rounded-lg shadow-lg dark:bg-gray-200 dark:text-gray-800">
       <header>
         <cld-image
@@ -32,7 +32,7 @@
         </p>
         <aside v-if="!!post.tags" class="col-span-2 row-start-1 space-x-1 text-xs text-teal-500 dark:text-teal-700">
           <span v-for="(tag, index) in post.tags" :key="index">
-            {{ tag.tag }}
+            {{ tag.title }}
           </span>
         </aside>
       </main>

@@ -74,19 +74,10 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Tags',
-        path: 'content/tags/**/*.md',
-      },
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
         typeName: 'Settings',
         path: 'content/settings/**/*.md',
         refs: {
-          workItem: 'Work',
           workItems: 'Work',
-          singleWorkItem: 'Work',
         },
       },
     }

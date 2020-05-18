@@ -28,17 +28,6 @@ collections:
             displayFields: [title]
             valueField: id
             multiple: true
-          - label: Work
-            name: workCollection
-            widget: list
-            fields:
-              - label: Work Item
-                name: workItem
-                widget: relation
-                collection: work
-                searchFields: [title]
-                displayFields: [title]
-                valueField: id
   - label: "Pages"
     name: "mainpages"
     files:

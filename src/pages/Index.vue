@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #hero>
-      <HomeHero class="lg:col-span-3 xl:col-span-4 row-start-1" />
+      <HomeHero class="row-start-1 lg:col-span-3 xl:col-span-4" />
     </template>
     <template #default>
       <PostSection
@@ -50,7 +50,7 @@
       title
       path
       tags {
-        tag
+        title
       }
       excerpt
       image

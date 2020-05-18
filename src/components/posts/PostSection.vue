@@ -1,6 +1,6 @@
 <template>
-  <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 grid-flow-row-dense">
-    <h2 class="ml-3 -mr-3 px-4 py-1 text-2xl text-indigo-900 bg-yellow-500 sm:col-span-2 lg:col-span-2 transform -skew-x-15 shadow-sharp-right rounded">
+  <section class="grid grid-flow-row-dense grid-cols-1 gap-8 sm:grid-cols-2">
+    <h2 class="px-4 py-1 ml-3 -mr-3 text-2xl text-indigo-900 transform bg-yellow-500 rounded sm:col-span-2 lg:col-span-2 -skew-x-15 shadow-sharp-right">
       <span class="inline-block transform skew-x-15">{{ heading }}</span>
     </h2>
     <p class="post-section__intro">

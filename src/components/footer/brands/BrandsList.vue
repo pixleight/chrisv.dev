@@ -1,7 +1,7 @@
 <template>
-  <section class="bg-gray-light overflow-x-auto">
+  <section class="overflow-x-auto bg-gray-light">
     <div class="flex flex-wrap justify-center">
-      <div class="p-4 flex items-center justify-center" v-for="brand in $static.brands.edges" :key="brand.node.id">
+      <div class="flex items-center justify-center p-4" v-for="brand in $static.brands.edges" :key="brand.node.id">
         <g-image :src="brand.node.logo" :alt="brand.node.title" />
       </div>
     </div>

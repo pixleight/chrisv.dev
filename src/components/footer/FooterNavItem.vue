@@ -1,6 +1,6 @@
 <template>
   <li>
-    <g-link :to="to" class="inline-block px-2 py-1 uppercase relative hover:text-gray-dark transition-colors duration-200 ease-out">
+    <g-link :to="to" class="relative inline-block px-2 py-1 uppercase transition-colors duration-200 ease-out hover:text-gray-dark">
       <span class="relative z-10">
         <slot />
       </span>

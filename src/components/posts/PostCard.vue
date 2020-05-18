@@ -2,8 +2,8 @@
   <g-link
     :href="post.path"
     :aria-label="post.title"
-    class="sm:row-span-3 md:row-span-1 lg:row-span-3 transition-all duration-150 ease-in transform hover:-translate-y-3 hover:shadow-xl">
-    <article class="rounded-lg overflow-hidden bg-gray-900 dark:bg-gray-200 text-gray-200 dark:text-gray-800 shadow-lg flex flex-col h-full relative">
+    class="transition-all duration-150 ease-in transform sm:row-span-3 md:row-span-1 lg:row-span-3 hover:-translate-y-3 hover:shadow-xl">
+    <article class="relative flex flex-col h-full overflow-hidden text-gray-200 bg-gray-900 rounded-lg shadow-lg dark:bg-gray-200 dark:text-gray-800">
       <header>
         <cld-image
           :publicId="assetUrl"
@@ -23,14 +23,14 @@
           />
         </cld-image>
       </header>
-      <main class="flex-1 mt-0 p-2 grid gap-2">
-        <h2 class="text-xl self-end relative text-yellow-500 dark:text-indigo-800">
+      <main class="grid flex-1 gap-2 p-2 mt-0">
+        <h2 class="relative self-end text-xl text-yellow-500 dark:text-indigo-800">
           {{ post.title }}
         </h2>
-        <p class="col-span-2 row-start-2 text-gray-300 dark:text-gray-700 text-sm">
+        <p class="col-span-2 row-start-2 text-sm text-gray-300 dark:text-gray-700">
           {{ post.excerpt }}
         </p>
-        <aside v-if="!!post.tags" class="text-teal-500 dark:text-teal-700 text-xs col-span-2 row-start-1 space-x-1">
+        <aside v-if="!!post.tags" class="col-span-2 row-start-1 space-x-1 text-xs text-teal-500 dark:text-teal-700">
           <span v-for="(tag, index) in post.tags" :key="index">
             {{ tag.tag }}
           </span>

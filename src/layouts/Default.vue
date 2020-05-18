@@ -1,9 +1,9 @@
 <template>
-  <div class="container mx-auto mt-24 lg:mt-0 px-8 h-screen text-gray-900 dark:text-gray-100">
-    <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+  <div class="container h-screen px-8 mx-auto mt-24 text-gray-900 lg:mt-0 dark:text-gray-100">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 xl:grid-cols-4">
       <SiteHeader />
       <slot name="hero"/>
-      <main class="py-8 min-h-screen lg:col-span-2 xl:col-span-3">
+      <main class="min-h-screen py-8 lg:col-span-2 xl:col-span-3">
         <slot/>
       </main>
     </div>

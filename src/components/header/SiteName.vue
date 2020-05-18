@@ -1,18 +1,18 @@
 <template>
   <g-link to="/" class="flex items-center lg:flex-col lg:mb-8">
-    <figure class="overflow-hidden bg-blue-800 shadow w-12 h-12 mr-4 lg:shadow-lg lg:mx-auto lg:mb-2 lg:w-24 lg:h-auto">
+    <figure class="w-12 h-12 mr-4 overflow-hidden bg-blue-800 shadow lg:shadow-lg lg:mx-auto lg:mb-2 lg:w-24 lg:h-auto">
       <Avatar />
     </figure>
-    <span class="sitename text-center text-xl flex justify-center items-center">
-      <span class="bracket text-3xl">{</span>
-      <span class="address px-1">
+    <span class="flex items-center justify-center text-xl text-center sitename">
+      <span class="text-3xl bracket">{</span>
+      <span class="px-1 address">
         <span class="name">
           <span class="firstname">chris</span>
           <span class="lastname">v</span>
         </span>
         <span class="tld">.dev</span>
       </span>
-      <span class="bracket text-3xl">}</span>
+      <span class="text-3xl bracket">}</span>
     </span>
   </g-link>
 </template>

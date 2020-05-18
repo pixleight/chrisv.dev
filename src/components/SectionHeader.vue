@@ -10,7 +10,7 @@
   >
     <slot>
       <h2
-        class="heading flex items-center pl-8 pr-4 pb-1 text-white whitespace-no-wrap text-2xl md:text-3xl lg:text-4x"
+        class="flex items-center pb-1 pl-8 pr-4 text-2xl text-white whitespace-no-wrap heading md:text-3xl lg:text-4x"
         :class="[
           headingVariantClass,
           {
@@ -21,7 +21,7 @@
         <span class="pr-2" v-if="emoji" aria-hidden="true">{{ emoji }}</span> {{ heading }}
       </h2>
       <p
-        class="py-2 self-center text-gray-dark"
+        class="self-center py-2 text-gray-dark"
         :class="{
           'text-right': !!flip,
           'text-gray': !!(variant == 'invert'),

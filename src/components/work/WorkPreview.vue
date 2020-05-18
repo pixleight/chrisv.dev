@@ -1,17 +1,17 @@
 <template>
   <g-link class="sm:row-span-3 md:row-span-1 lg:row-span-3">
-    <article class="rounded-lg overflow-hidden bg-gray-light shadow-lg flex flex-col h-full relative">
+    <article class="relative flex flex-col h-full overflow-hidden rounded-lg shadow-lg bg-gray-light">
       <header>
         <g-image src="https://placekitten.com/600/400" />
       </header>
-      <main class="flex-1 mt-0 p-2 grid gap-2">
-        <h2 class="text-xl self-end relative">
+      <main class="grid flex-1 gap-2 p-2 mt-0">
+        <h2 class="relative self-end text-xl">
           Project Name
         </h2>
-        <p class="col-span-2 row-start-2 text-theme-invert text-sm">
+        <p class="col-span-2 row-start-2 text-sm text-theme-invert">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <aside class="text-theme-secondary text-xs col-span-2 row-start-1 space-x-1">
+        <aside class="col-span-2 row-start-1 space-x-1 text-xs text-theme-secondary">
           <span>Vue</span>
           <span>Craft</span>
           <span>CSS</span>

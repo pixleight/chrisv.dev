@@ -1,13 +1,13 @@
 <template>
-  <div class="header-wrap py-0 px-8 fixed top-0 left-0 right-0 z-10 bg-gray-800 border-indigo-800 border-b shadow-lg lg:shadow-none lg:bg-transparent lg:border-none lg:px-0 lg:py-8 lg:static">
+  <div class="fixed top-0 left-0 right-0 z-10 px-8 py-0 bg-gray-800 border-b border-indigo-800 shadow-lg header-wrap lg:shadow-none lg:bg-transparent lg:border-none lg:px-0 lg:py-8 lg:static">
     <header class="flex items-center py-2 lg:block lg:sticky lg:pt-0 lg:pb-2 lg:border-r lg:border-gray-800">
       <SiteName />
       <HamburgerMenu
-        class="ml-auto lg:hidden w-10"
+        class="w-10 ml-auto lg:hidden"
         @toggle="toggleMenu($event)"
       />
       <nav
-        class="absolute top-0 w-56 mt-12 mr-12 py-4 right-0 bg-indigo-800 transform transition-all opacity-0 rounded shadow-xl duration-200 ease lg:block lg:static lg:m-0 lg:w-auto lg:opacity-100 lg:translate-y-0 lg:rounded-none lg:bg-transparent lg:shadow-none lg:pointer-events-auto"
+        class="absolute top-0 right-0 w-56 py-4 mt-12 mr-12 transition-all duration-200 transform bg-indigo-800 rounded shadow-xl opacity-0 ease lg:block lg:static lg:m-0 lg:w-auto lg:opacity-100 lg:translate-y-0 lg:rounded-none lg:bg-transparent lg:shadow-none lg:pointer-events-auto"
         :class="{
           '-translate-y-3 pointer-events-none': !active,
           'translate-y-2 opacity-100 pointer-events-auto': active,

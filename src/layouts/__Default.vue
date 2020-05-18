@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper min-h-screen text-gray-dark foo">
-    <header class="fixed z-20 inset-0 bottom-auto sm:inset-auto sm:static bg-indigo-900 text-white">
-      <div class="flex sm:fixed sm:inset-0 p-2 sm:p-4 sm:w-48 border-t-2 sm:border-t-4 sm:border-b-4 border-purple">
+  <div class="min-h-screen wrapper text-gray-dark foo">
+    <header class="fixed inset-0 bottom-auto z-20 text-white bg-indigo-900 sm:inset-auto sm:static">
+      <div class="flex p-2 border-t-2 sm:fixed sm:inset-0 sm:p-4 sm:w-48 sm:border-t-4 sm:border-b-4 border-purple">
         <PrimaryNav />
       </div>
     </header>

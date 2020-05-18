@@ -1,12 +1,12 @@
 <template>
-  <g-link class="block flex" :to="post.path">
-    <article class="relative w-full bg-gray-medium rounded-lg shadow overflow-hidden flex flex-col hover:shadow-xl">
-      <h3 class="relative z-10 text-white mt-auto mb-4 mr-4 px-4 pt-2 pb-3">
+  <g-link class="flex block" :to="post.path">
+    <article class="relative flex flex-col w-full overflow-hidden rounded-lg shadow bg-gray-medium hover:shadow-xl">
+      <h3 class="relative z-10 px-4 pt-2 pb-3 mt-auto mb-4 mr-4 text-white">
         <g-link :to="post.path">
           <span class="block">{{ post.title }}</span>
         </g-link>
       </h3>
-      <g-image :src="post.avatar" class="w-full absolute inset-0 object-cover" />
+      <g-image :src="post.avatar" class="absolute inset-0 object-cover w-full" />
     </article>
   </g-link>
 </template>

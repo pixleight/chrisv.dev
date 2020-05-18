@@ -1,15 +1,15 @@
 <template>
-  <section class="relative flex sm:block z-10 w-full justify-between items-center">
-    <figure class="overflow-hidden bg-blue-600 w-12 sm:w-24 sm:mx-auto">
+  <section class="relative z-10 flex items-center justify-between w-full sm:block">
+    <figure class="w-12 overflow-hidden bg-blue-600 sm:w-24 sm:mx-auto">
       <Avatar/>
     </figure>
-    <p class="font-display text-xl leading-tight sm:-ml-8">
+    <p class="text-xl leading-tight font-display sm:-ml-8">
       <span class="text-3xl">{</span> 
       <span class="sm:block sm:ml-4">chris<span class="bg-white text-purple">violette</span>.dev</span> 
       <span class="text-3xl">}</span>
     </p>
     <Hamburger @toggle="isVisible = !isVisible" :isActive="isVisible" />
-    <div class="fixed sm:static sm:block inset-0 bg-indigo-900 opacity-0 sm:opacity-100" :class="{ 'is-visible opacity-100': isVisible }">
+    <div class="fixed inset-0 bg-indigo-900 opacity-0 sm:static sm:block sm:opacity-100" :class="{ 'is-visible opacity-100': isVisible }">
       <nav class="px-12 sm:p-0">
         <ul>
           <primary-nav-item to="/snippets/">Snippets</primary-nav-item>

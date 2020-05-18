@@ -1,5 +1,5 @@
 <template>
-  <button class="relative inline-block sm:hidden cursor-pointer focus:outline-none" :class="{'is-active': isActive}" @click="$emit('toggle')">
+  <button class="relative inline-block cursor-pointer sm:hidden focus:outline-none" :class="{'is-active': isActive}" @click="$emit('toggle')">
     <span></span>
     <span></span>
     <span></span>

@@ -1,7 +1,7 @@
 <template>
-  <div class="site-footer z-30 sm:row-start-2">
+  <div class="z-30 site-footer sm:row-start-2">
     <brands-list/>
-    <footer class="bg-gray-dark text-white z-10 p-8">
+    <footer class="z-10 p-8 text-white bg-gray-dark">
       <section-header
         heading="Chris Violette"
         emoji="👨‍🎤"
@@ -17,7 +17,7 @@
           <footer-nav-item to="/contact/">Contact</footer-nav-item>
         </ul>
       </nav>
-      <p class="text-xs mt-8">&copy; 2020 Chris Violette</p>
+      <p class="mt-8 text-xs">&copy; 2020 Chris Violette</p>
     </footer>
   </div>
 </template>

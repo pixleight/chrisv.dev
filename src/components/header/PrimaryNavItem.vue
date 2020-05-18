@@ -2,10 +2,10 @@
   <li class="py-2">
     <g-link 
       :to="to"
-      class="block relative font-display py-2 pr-4 pl-8 hover:text-indigo-900 transition-colors duration-200 ease-out"
+      class="relative block py-2 pl-8 pr-4 transition-colors duration-200 ease-out font-display hover:text-indigo-900"
     >
       <slot></slot>
-      <span class="absolute block bg-yellow-500 inset-0 sm:absolute sm:right-auto sm:w-0 transform origin-bottom-right translate-x-6 skew-x-15 rounded-tl rounded-tr rounded-bl"></span>
+      <span class="absolute inset-0 block origin-bottom-right transform translate-x-6 bg-yellow-500 rounded-tl rounded-tr rounded-bl sm:absolute sm:right-auto sm:w-0 skew-x-15"></span>
     </g-link>
   </li>
 </template>

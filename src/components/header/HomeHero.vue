@@ -1,17 +1,17 @@
 <template>
-  <div class="grid grid-cols-3 lg:items-center lg:min-h-screen overflow-hidden rounded-lg mb-16">
-    <picture class="transform -skew-x-15 origin-top-right overflow-hidden rounded-lg">
-      <g-image class="transform skew-x-15 origin-top-right" src="~/assets/cviolette-photo.jpg" alt="Chris Violette, Web Developer &amp; Designer"></g-image>
+  <div class="grid grid-cols-3 mb-16 overflow-hidden rounded-lg lg:items-center lg:min-h-screen">
+    <picture class="overflow-hidden origin-top-right transform rounded-lg -skew-x-15">
+      <g-image class="origin-top-right transform skew-x-15" src="~/assets/cviolette-photo.jpg" alt="Chris Violette, Web Developer &amp; Designer"></g-image>
     </picture>
-    <div class="pt-12 pb-4 col-span-2 transform -skew-x-15 origin-bottom-right flex bg-indigo-900 rounded-lg top-heading">
-      <div class="m-auto transform skew-x-15 flex flex-col justify-center items-center">
-        <h1 class="text-2xl sm:text-4xl font-medium text-white relative transition-all duration-150 ease-out">
+    <div class="flex col-span-2 pt-12 pb-4 origin-bottom-right transform bg-indigo-900 rounded-lg -skew-x-15 top-heading">
+      <div class="flex flex-col items-center justify-center m-auto transform skew-x-15">
+        <h1 class="relative text-2xl font-medium text-white transition-all duration-150 ease-out sm:text-4xl">
           <span class="relative z-10">Hi, I'm Chris.</span>
         </h1>
-        <p class="text-white text-center my-3">
+        <p class="my-3 text-center text-white">
           Web Developer <br class="sm:hidden"/>& Designer
         </p>
-        <p class="time-mag hidden sm:block text-center leading-tight text-white text-sm px-2 py-1 opacity-0 transform translate-y-2 transition-all duration-300 ease-out text-indigo-900 bg-white bg-opacity-75 rounded-sm shadow-sharp-right">
+        <p class="hidden px-2 py-1 text-sm leading-tight text-center text-white text-indigo-900 transition-all duration-300 ease-out transform translate-y-2 bg-white bg-opacity-75 rounded-sm opacity-0 time-mag sm:block shadow-sharp-right">
           2006 Time Magazine<br/>
           Person of the Year!
         </p>

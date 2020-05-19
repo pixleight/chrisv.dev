@@ -4,7 +4,7 @@ date: 2020-02-27T18:07:41.948Z
 tags:
   - CSS
   - Basics
-image: https://res.cloudinary.com/chrisvdev/image/upload/v1589420693/snippets/snippet_css-variable-scope_khicyl.png
+image: https://res.cloudinary.com/chrisvdev/image/upload/v1589920170/snippets/cssvariables_dsgo2i.png
 ---
 CSS variables are powerful. They allow you to define values to be reused throughout your stylesheet. Not only does this help with maintainability (*"What color was that primary again? #44337a or #6b46c1?"*), but one of the most useful features is *scope*.
 

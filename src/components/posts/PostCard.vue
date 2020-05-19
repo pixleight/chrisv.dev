@@ -1,6 +1,6 @@
 <template>
   <g-link
-    :href="post.path"
+    :to="post.path"
     :aria-label="post.title"
     class="transition-all duration-150 ease-in transform sm:row-span-3 hover:-translate-y-3 hover:shadow-xl">
     <article class="relative flex flex-col h-full overflow-hidden text-gray-200 bg-gray-900 rounded-lg shadow-lg dark:bg-gray-200 dark:text-gray-800">

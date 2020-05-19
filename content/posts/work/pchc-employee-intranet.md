@@ -4,6 +4,8 @@ title: PCHC Employee Intranet
 excerpt: Designed and developed an internal employee intranet to communicate
   company news and other updates to nearly 800 employees.
 date: 2020-05-13T20:36:39.635Z
+tags:
+  - WordPress
 image: https://res.cloudinary.com/chrisvdev/image/upload/v1589402015/work/pchc-intranet_w4cuqa.jpg
 ---
 Designed and developed an internal employee intranet to communicate company news and other updates to nearly 800 employees.

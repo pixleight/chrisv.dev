@@ -4,7 +4,7 @@ date: 2020-02-28T02:03:28.700Z
 tags:
   - Craft CMS
   - Twig
-image: https://res.cloudinary.com/chrisvdev/image/upload/v1589920170/snippets/twigternary_mylwie.png
+image: https://res.cloudinary.com/chrisvdev/image/upload/v1589921857/snippets/twigternary-sq_gknava.png
 ---
 A ternary operator is a shorthand way to write an `if...else` statement. In many languages, this takes on the form of `variable to check ? return if true : return if false`. For example, in Javascript:
 

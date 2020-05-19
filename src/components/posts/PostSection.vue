@@ -6,7 +6,7 @@
     <p class="post-section__intro">
       {{ intro }}
     </p>
-    <PostCard v-for="post in postNodes" :key="post.id" :post="post" />
+    <PostCard v-for="post in postNodes" :key="post.id" :post="post" :image-gravity="imageGravity" />
   </section>
 </template>
 
@@ -18,6 +18,10 @@
       heading: String,
       intro: String,
       posts: Array,
+      imageGravity: {
+        type: String,
+        default: 'center',
+      },
     },
     components: {
       PostCard,

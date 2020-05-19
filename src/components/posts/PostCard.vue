@@ -3,7 +3,7 @@
     :to="post.path"
     :aria-label="post.title"
     class="transition-all duration-150 ease-in transform sm:row-span-3 hover:-translate-y-3 hover:shadow-xl">
-    <article class="relative flex flex-col h-full overflow-hidden text-gray-200 bg-gray-900 rounded-lg shadow-lg dark:bg-gray-200 dark:text-gray-800">
+    <article class="relative flex flex-col h-full overflow-hidden rounded-lg shadow-lg">
       <header>
         <cld-image
           :publicId="assetUrl"
@@ -18,12 +18,13 @@
             width="600"
             height="315"
             crop="lfill"
+            :gravity="imageGravity"
             quality="auto"
             fetchFormat="auto"
           />
         </cld-image>
       </header>
-      <main class="grid flex-1 gap-2 p-2 mt-0">
+      <main class="grid flex-1 gap-2 p-2 mt-0 text-gray-200 bg-gray-900 dark:bg-gray-200 dark:text-gray-800">
         <h2 class="relative self-end text-xl text-yellow-500 dark:text-indigo-800">
           {{ post.title }}
         </h2>
@@ -44,6 +45,10 @@
   export default {
     props: {
       post: Object,
+      imageGravity: {
+        type: String,
+        default: 'center',
+      },
     },
     computed: {
       assetUrl() {

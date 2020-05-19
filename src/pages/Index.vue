@@ -9,6 +9,7 @@
         heading="Code Snippets"
         intro="Bits of code I've picked found helpful over the years."
         :posts="snippets"
+        image-gravity="north"
       />
       <PostSection
         class="mb-16"

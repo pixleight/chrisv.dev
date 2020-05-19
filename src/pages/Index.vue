@@ -6,6 +6,12 @@
     <template #default>
       <PostSection
         class="mb-16"
+        heading="Code Snippets"
+        intro="Bits of code I've picked found helpful over the years."
+        :posts="snippets"
+      />
+      <PostSection
+        class="mb-16"
         heading="Things I've Built"
         intro="Examples of projects I've worked on, big and small."
         :posts="workItems"
@@ -33,6 +39,9 @@
     computed: {
       workItems() {
         return this.$page.collections.workItems;
+      },
+      snippets() {
+        return this.$page.snippets.edges;
       }
     }
   }
@@ -54,6 +63,17 @@
       }
       excerpt
       image
+    }
+  }
+  snippets: allSnippet(limit: 6) {
+    edges {
+      node {
+        id
+        title
+        date
+        path
+        image
+      }
     }
   }
 }

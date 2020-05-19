@@ -4,9 +4,9 @@
       <span class="inline-block transform skew-x-15">{{ heading }}</span>
     </h2>
     <p class="post-section__intro">
-      Examples of projects I've worked on, big and small.
+      {{ intro }}
     </p>
-    <PostCard v-for="post in posts" :key="post.id" :post="post" />
+    <PostCard v-for="post in postNodes" :key="post.id" :post="post" />
   </section>
 </template>
 
@@ -21,6 +21,11 @@
     },
     components: {
       PostCard,
+    },
+    computed: {
+      postNodes() {
+        return this.posts.map(post => post.node || post)
+      }
     }
   }
 </script>
